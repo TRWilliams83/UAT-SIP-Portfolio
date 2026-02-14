@@ -1,0 +1,13 @@
+sip-portfolio/
+  index.html
+  sip.html
+  boards.html
+  projects.html
+  contact.html
+  assets/
+    css/
+      style.css
+    img/
+      (your images)
+    docs/
+      sip-brief.pdf   (placeholder file)
