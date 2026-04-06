@@ -68,3 +68,33 @@ img {
   text-decoration: none;
   border-radius: 6px;
 }
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.card img {
+  display: block;
+  margin: 12px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+main p, main li {
+  max-width: 75ch;
+}
+
+body {
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+header, footer, .card {
+  background: white;
+}
+
+.card {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
