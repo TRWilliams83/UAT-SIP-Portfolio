@@ -19,68 +19,165 @@
 
 <main>
   <h1>SIP: Project C2 — Capillary Canopy</h1>
-  <p class="small">Design Prototype • SIP311 & 408 • Tests • Data </p>
+  <p class="small">Design Prototype • SIP311 & SIP408 • Progress • Testing • Revisions</p>
 
   <div class="card">
     <h2>Innovation Claim</h2>
     <p>
-    <strong>Claim:</strong> 
-    This project is innovative because it uses 3D-printed lid geometry. Not external equipment to create repeatable, tunable microclimates in small tanks, combining condensation routing, optional vent control, and an integrated reservoir + wick tube into a single modular lid system manufactured on a Bambu P1P from Fusion 360 models.
+      <strong>Claim:</strong>
+      Project C2 is innovative because it uses 3D-printed lid geometry rather than external equipment to create repeatable, tunable microclimates in small tanks. The design combines condensation routing, optional vent control, and a reservoir-fed wick system into a single modular lid manufactured from Fusion 360 models on a Bambu P1P.
     </p>
   </div>
 
   <div class="card">
     <h2>Project Description</h2>
-    <p>This project designs and prototypes three 3D-printed lids for three 2.5-gallon glass tanks, modeled in Fusion 360 and printed on a Bambu P1P. Each lid will be a tuned variant (ex: arid / temperate / humid behavior) using the same core architecture: a sealed rim interface, controlled vent options, and a reservoir-fed wick tube that supports passive moisture movement. The lids will incorporate surface features—like internal slopes, drip rails, and condensation channels—to intentionally route condensed water (ideally away from the front viewing pane) and reduce user maintenance. The intended users are hobbyists, students, and “I want a tiny ecosystem, but I also want my weekends back” people who want a stable micro-environment without external pumps or constant attention.
+    <p>
+      Project C2 explores how passive environmental control can be built directly into a terrarium lid. The goal is to use geometry, material behavior, and controlled water movement to support stable microclimates with less maintenance. The project focuses on sealed rim fitment, condensation routing, wick-fed moisture transfer, and biome-specific tuning for different enclosure conditions.
     </p>
   </div>
 
   <div class="card">
-    <h2>Visuals & Artifacts</h2>
+    <h2>Current Status</h2>
+    <p>
+      The lid prototype is currently functional in basic fitment and sealing, but still needs refinement in the internal geometry to improve condensation routing and moisture redistribution. Initial testing showed that moisture movement did not increase as much as expected over break, so the next revision will focus on adjusting internal paths and water return behavior.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Prototype Progress Timeline</h2>
+    <p class="small">Each milestone below documents design changes, observations, and next steps.</p>
+  </div>
+
+  <div class="card">
+    <h3>Prototype Revision 1 — Initial Fit Test</h3>
+    <img src="assets/img/prototype-v1.jpg" alt="Initial lid prototype fit test" />
+    <p class="small">Figure 1. First printed lid used to check overall dimensions and tank fit.</p>
+    <p>
+      This revision focused on basic dimensions, fitment, and confirming that the lid seated correctly against the tank rim. The goal at this stage was not full environmental performance, but making sure the part physically worked before refining internal details.
+    </p>
+    <ul>
+      <li>Focus: rim fit and overall dimensions</li>
+      <li>Result: basic fit confirmed</li>
+      <li>Issue found: internal geometry still too simple for reliable moisture routing</li>
+      <li>Next step: revise internal features and wick path</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Prototype Revision 2 — Internal Geometry Update</h3>
+    <img src="assets/img/prototype-v2.jpg" alt="Second lid revision showing internal geometry changes" />
+    <p class="small">Figure 2. Updated prototype with revised internal features.</p>
+    <p>
+      This revision introduced changes intended to improve moisture movement and direct condensation away from the front viewing area. The focus shifted from basic fit to functional environmental control.
+    </p>
+    <ul>
+      <li>Focus: condensation routing and internal channel behavior</li>
+      <li>Result: improved structure, but moisture flow still underperformed</li>
+      <li>Issue found: expected passive redistribution was weaker than planned</li>
+      <li>Next step: continue refining internal slopes and return paths</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Spring Break Testing — Observation Phase</h3>
+    <img src="assets/img/testing-break.jpg" alt="Prototype during spring break observation period" />
+    <p class="small">Figure 3. Prototype observed over extended time to evaluate moisture behavior.</p>
+    <p>
+      Over spring break, the system was left with more time to determine whether moisture movement would increase naturally as the enclosure stabilized. The expected increase did not happen, which showed that more geometry changes were still needed.
+    </p>
+    <ul>
+      <li>Focus: passive moisture redistribution over time</li>
+      <li>Result: system remained stable, but flow improvement was limited</li>
+      <li>Issue found: moisture was not moving as aggressively as expected</li>
+      <li>Next step: redesign internal surfaces to encourage better flow</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Current Prototype — Working Version</h3>
+    <img src="assets/img/current-prototype.jpg" alt="Current working lid prototype installed on tank" />
+    <p class="small">Figure 4. Current prototype installed and under evaluation.</p>
+    <p>
+      The current version represents a functional intermediate prototype. It demonstrates the core concept, fits the tank, and supports ongoing testing, but it is still being refined before it can be considered a fully resolved design.
+    </p>
+    <ul>
+      <li>Focus: integrated system performance</li>
+      <li>Result: working prototype with clear direction for refinement</li>
+      <li>Issue found: moisture management still needs tuning</li>
+      <li>Next step: update internal geometry and continue comparison testing</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Testing and Observations</h2>
     <div class="grid">
       <div class="card">
-        <h3>Blueprints / CAD</h3>
-        <ul>
-          <li>Screenshot: Lid v1 profile</li>
-          <li>Screenshot: Wick tube geometry</li>
-          <li>Export: DXF/STL links (optional)</li>
-        </ul>
+        <h3>Condensation Behavior</h3>
+        <img src="assets/img/condensation-test.jpg" alt="Condensation behavior inside prototype tank" />
+        <p class="small">Condensation pattern observed during testing.</p>
+        <p>
+          This test helps show where water collects and whether it returns to useful areas or ends up blocking the front viewing pane.
+        </p>
       </div>
+
       <div class="card">
-        <h3>Concept Art / Diagrams</h3>
-        <ul>
-          <li>Evaporation → condensation → return flow diagram</li>
-          <li>Biome variants (arid/temperate/humid) comparison</li>
-        </ul>
+        <h3>Wick Performance</h3>
+        <img src="assets/img/wick-test.jpg" alt="Wick performance test for passive moisture movement" />
+        <p class="small">Wick path and moisture transfer test.</p>
+        <p>
+          The wick system is intended to move water passively from the reservoir into the enclosure environment without pumps or active support systems.
+        </p>
       </div>
+
       <div class="card">
-        <h3>Build Photos</h3>
-        <p>Add photos of prints, test fits, assembly, failures, revisions.</p>
+        <h3>Fitment and Seal</h3>
+        <img src="assets/img/fitment-test.jpg" alt="Fitment and seal test of 3D printed lid" />
+        <p class="small">Fitment and sealing check against tank rim.</p>
+        <p>
+          Reliable fitment is critical because the lid must control evaporation and internal humidity before any moisture-routing features can work consistently.
+        </p>
       </div>
     </div>
   </div>
 
   <div class="card">
-    <h2>SIP Brief (Week 4)</h2>
-    <p>Placeholder: upload PDF to <code>assets/docs/sip-brief.pdf</code>.</p>
-    <p><a href="assets/docs/sip-brief.pdf" target="_blank" rel="noreferrer">Open SIP Brief PDF →</a></p>
+    <h2>CAD and Design Artifacts</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Lid Profile</h3>
+        <img src="assets/img/cad-profile.jpg" alt="Fusion 360 lid profile screenshot" />
+        <p class="small">Fusion 360 profile showing overall lid geometry.</p>
+      </div>
 
-    <!-- Optional embed (works for many browsers) -->
-    <!--
-    <iframe src="assets/docs/sip-brief.pdf" style="width:100%; height:600px; border:1px solid #eee; border-radius:14px;"></iframe>
-    -->
+      <div class="card">
+        <h3>Wick Tube Geometry</h3>
+        <img src="assets/img/cad-wick-tube.jpg" alt="Fusion 360 wick tube design screenshot" />
+        <p class="small">Integrated wick path designed into the lid system.</p>
+      </div>
+
+      <div class="card">
+        <h3>Condensation Routing Features</h3>
+        <img src="assets/img/cad-routing.jpg" alt="Condensation routing features in CAD model" />
+        <p class="small">Internal surfaces intended to guide water return.</p>
+      </div>
+    </div>
   </div>
-<!--
+
   <div class="card">
-    <h2>Links (Optional)</h2>
+    <h2>Next Steps</h2>
     <ul>
-      <li><a href="#">Prototype video (YouTube/Drive)</a></li>
-      <li><a href="#">Testing notes / metrics sheet</a></li>
+      <li>Refine internal geometry to improve moisture redistribution</li>
+      <li>Continue testing condensation return behavior</li>
+      <li>Document comparison between prototype revisions</li>
+      <li>Finalize a cleaner and more repeatable working version</li>
     </ul>
   </div>
-  -->
-</main>
 
+  <div class="card">
+    <h2>SIP Brief</h2>
+    <p><a href="assets/docs/sip-brief.pdf" target="_blank" rel="noreferrer">Open SIP Brief PDF →</a></p>
+  </div>
+</main>
 <footer>© <span id="y"></span> Your Name</footer>
 <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
