@@ -98,3 +98,21 @@ header, footer, .card {
 .card {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 600;
+}
+
+form {
+  margin-top: 10px;
+}
