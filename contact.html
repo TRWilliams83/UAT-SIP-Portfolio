@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Information | Timothy R. Williams</title>
+  <title>Contact | Timothy R. Williams</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -19,31 +19,32 @@
 
 <main>
   <h1>Contact</h1>
+  <p class="small">Questions, feedback, or project inquiries can be sent using the form below.</p>
+
   <div class="card">
-    <p>Email: <a href="timothy.r.williams168@gmail.com"></a></p>
-
-    <h2>Inquiry Box</h2>
-    <p class="small">Submit feedback here</p>
-
-    <form action="action="https://formspree.io/f/mjgayaya" method="POST">
-      <label>Your name:
-      <br><input name="name" required></label><br><br>
-      <label>Your email:
-      <br><input type="email" name="email" required></label><br><br>
-      <label>Enter Message Here:
-      <br><textarea name="message" rows="6" required></textarea></label><br><br>
-      <!-- form button -->
-      <button type="submit">Send</button>
-    
-    </form>
-
-    <hr>
-    <!-- maybe 
-    <p class="small">
-      Optional social:
-      <a href="#">LinkedIn</a> • <a href="#">Instagram</a> • <a href="#">GitHub</a>
+    <h2>Contact Information</h2>
+    <p>
+      Email:
+      <a href="mailto:timothy.r.williams168@gmail.com">timothy.r.williams168@gmail.com</a>
     </p>
-    -->
+  </div>
+
+  <div class="card">
+    <h2>Inquiry Form</h2>
+    <p class="small">Submit feedback or questions here.</p>
+
+    <form action="https://formspree.io/f/mjgayaya" method="POST">
+      <label for="name">Your name</label><br>
+      <input id="name" name="name" type="text" required><br><br>
+
+      <label for="email">Your email</label><br>
+      <input id="email" name="email" type="email" required><br><br>
+
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </div>
 </main>
 
