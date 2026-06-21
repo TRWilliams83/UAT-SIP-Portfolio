@@ -2,14 +2,17 @@
   --max: 980px;
 }
 
+/* Overall page setup */
 body {
   margin: 0;
   font-family: system-ui, Arial, sans-serif;
   line-height: 1.5;
   background: #f3f4f6;
   color: #1a1a1a;
+  font-size: 16px;
 }
 
+/* Header and navigation */
 header {
   border-bottom: 1px solid #ddd;
   background: white;
@@ -20,6 +23,7 @@ nav {
   margin: 0 auto;
   padding: 14px 16px;
   display: flex;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -30,6 +34,7 @@ nav a {
   border-radius: 10px;
   color: #111;
   transition: background 0.15s ease;
+  font-size: 16px;
 }
 
 nav a:hover {
@@ -41,12 +46,15 @@ nav a.active {
   font-weight: 600;
 }
 
+/* Main page content */
 main {
   max-width: var(--max);
   margin: 0 auto;
   padding: 22px 16px 56px;
+  text-align: center;
 }
 
+/* Cards */
 .card {
   background: white;
   border: 1px solid #e5e5e5;
@@ -54,45 +62,105 @@ main {
   padding: 18px;
   margin: 14px 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  text-align: center;
 }
 
+/* Grid layout for image/card sections */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: stretch;
 }
 
+/* Cards inside grids */
+.grid .card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Images */
+img {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: 280px;
+  object-fit: contain;
+  margin: 15px auto;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: white;
+}
+
+/* Grid images */
+.grid img {
+  width: 100%;
+  max-width: 400px;
+  height: 260px;
+  object-fit: contain;
+  margin: 12px auto;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+/* Paragraphs and list items */
+main p,
+main li {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+
+/* Lists */
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+  text-align: center;
+}
+
+/* Small caption text */
+.small {
+  color: #555;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Tags */
 .tag {
   display: inline-block;
   padding: 4px 10px;
   border: 1px solid #ddd;
   border-radius: 999px;
-  margin-right: 6px;
-  font-size: 0.9rem;
+  margin: 4px;
+  font-size: 14px;
 }
 
-footer {
-  border-top: 1px solid #ddd;
-  padding: 16px;
-  text-align: center;
-  color: #666;
-  background: white;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 12px 0;
-  border-radius: 14px;
-  border: 1px solid #eee;
-}
-
-.small {
-  color: #555;
-  font-size: 0.95rem;
-}
-
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -109,21 +177,7 @@ img {
   opacity: 0.92;
 }
 
-h1, h2, h3 {
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-main p,
-main li {
-  max-width: 75ch;
-}
-
+/* Forms */
 input,
 textarea {
   width: 100%;
@@ -141,4 +195,40 @@ label {
 
 form {
   margin-top: 10px;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  color: #666;
+  background: white;
+  font-size: 16px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  img,
+  .grid img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }
