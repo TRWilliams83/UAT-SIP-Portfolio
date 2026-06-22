@@ -271,4 +271,30 @@ footer {
   h3 {
     font-size: 18px;
   }
+  table {
+    width: 100%;
+    margin: 16px auto;
+    border-collapse: collapse;
+    background: #f8f9fa;
+    border: 1px solid #cfd4da;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+    border: 1px solid #cfd4da;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  th {
+    background: #dfe3e7;
+    font-weight: 700;
+  }
+
+  tr:nth-child(even) {
+    background: #eef1f4;
+  }
 }
