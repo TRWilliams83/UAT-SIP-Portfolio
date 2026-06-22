@@ -74,12 +74,11 @@ main {
   text-align: left;
 }
 
-/* Small visual lift for cards */
 .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
 }
 
-/* Grid layout for image/card sections */
+/* Standard grid layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,6 +92,19 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+/* Home page 3-card grid */
+.home-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.home-grid .card {
+  min-height: 180px;
+}
+
+.home-grid .card p:last-child {
+  margin-top: auto;
 }
 
 /* Images */
@@ -154,7 +166,6 @@ main li {
   font-size: 16px;
 }
 
-/* Paragraph spacing */
 main p {
   margin-top: 8px;
   margin-bottom: 12px;
@@ -212,6 +223,34 @@ img + .small {
   transform: translateY(-1px);
 }
 
+/* Tables */
+table {
+  width: 100%;
+  margin: 16px auto;
+  border-collapse: collapse;
+  background: #f8f9fa;
+  border: 1px solid #cfd4da;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border: 1px solid #cfd4da;
+  text-align: center;
+  font-size: 15px;
+}
+
+th {
+  background: #dfe3e7;
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background: #eef1f4;
+}
+
 /* Forms */
 input,
 textarea {
@@ -250,7 +289,8 @@ footer {
     padding: 20px 14px 48px;
   }
 
-  .grid {
+  .grid,
+  .home-grid {
     grid-template-columns: 1fr;
   }
 
@@ -271,30 +311,10 @@ footer {
   h3 {
     font-size: 18px;
   }
-  table {
-    width: 100%;
-    margin: 16px auto;
-    border-collapse: collapse;
-    background: #f8f9fa;
-    border: 1px solid #cfd4da;
-    border-radius: 12px;
-    overflow: hidden;
-  }
 
   th,
   td {
-    padding: 8px 10px;
-    border: 1px solid #cfd4da;
-    text-align: center;
-    font-size: 15px;
-  }
-
-  th {
-    background: #dfe3e7;
-    font-weight: 700;
-  }
-
-  tr:nth-child(even) {
-    background: #eef1f4;
+    font-size: 14px;
+    padding: 7px 8px;
   }
 }
