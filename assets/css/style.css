@@ -337,3 +337,33 @@ footer {
   max-width: 700px;
   margin: -6px auto 18px;
 }
+/* Keeps project images separated from the Project Overview section */
+.project-image-grid {
+  margin-bottom: 28px;
+}
+
+/* Keeps groups of buttons aligned and evenly spaced */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+/* Prevents buttons from running together on smaller screens */
+.button-row .btn {
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-row .btn {
+    text-align: center;
+  }
+}
