@@ -399,3 +399,39 @@ footer {
     font-size: 14px;
   }
 }
+/* Keeps images on SIP and other pages responsive and consistently sized */
+main img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+  margin: 18px auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Maintains the standardized project-image grid */
+.project-image-grid img {
+  width: 100%;
+  height: 240px;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+}
+
+/* Keeps pairs of images aligned when they are inside a grid */
+.grid img {
+  width: 100%;
+}
+
+/* Smaller mobile image height */
+@media (max-width: 600px) {
+  main img {
+    max-height: 380px;
+  }
+
+  .project-image-grid img {
+    height: 230px;
+  }
+}
