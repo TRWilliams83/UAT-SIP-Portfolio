@@ -3,12 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Boards Objectives | Timothy R. Williams</title>
+
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    .boards-intro { max-width: 760px; margin-bottom: 2rem; }
-    .degree-dropdown { margin: 1.5rem 0; }
+    .boards-intro {
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+
+    .degree-dropdown {
+      margin: 1.5rem 0;
+    }
+
     .degree-dropdown > summary {
       display: flex;
       align-items: center;
@@ -16,911 +25,863 @@
       gap: 1rem;
       padding: 1.1rem 1.25rem;
       border: 1px solid currentColor;
-      border-radius: .75rem;
+      border-radius: 0.75rem;
       cursor: pointer;
       font-size: 1.2rem;
       font-weight: 700;
       list-style: none;
     }
-    .degree-dropdown > summary::-webkit-details-marker { display: none; }
-    .degree-dropdown > summary::after { content: "+"; font-size: 1.5rem; line-height: 1; }
-    .degree-dropdown[open] > summary::after { content: "−"; }
-    .degree-dropdown > summary small { margin-left: auto; font-size: .85rem; font-weight: 400; opacity: .75; }
-    .degree-content { padding-top: 1rem; }
-    .objective-jump-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 1rem 0 1.5rem; }
-    .objective-jump-list a { text-align: center; }
-    .evidence-placeholder { border-left: 4px solid currentColor; padding: .25rem 0 .25rem 1rem; opacity: .8; }
+
+    .degree-dropdown > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .degree-dropdown > summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .degree-dropdown[open] > summary::after {
+      content: "−";
+    }
+
+    .degree-dropdown > summary small {
+      margin-left: auto;
+      font-size: 0.85rem;
+      font-weight: 400;
+      opacity: 0.75;
+    }
+
+    .degree-content {
+      padding-top: 1rem;
+    }
+
+    .objective-jump-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .objective-jump-list a {
+      text-align: center;
+    }
+
+    .objective-statement {
+      font-size: 1.05rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card .button-row {
+      margin-top: auto;
+    }
+
+    .project-status {
+      font-weight: 700;
+    }
+
+    .mapping-pending {
+      padding: 1rem;
+      border-left: 4px solid currentColor;
+      opacity: 0.8;
+    }
+
+    .boards-footer-links {
+      margin-top: 2rem;
+    }
+
     @media (max-width: 700px) {
-      .objective-jump-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .degree-dropdown > summary { align-items: flex-start; flex-wrap: wrap; }
+      .objective-jump-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .degree-dropdown > summary {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
     }
   </style>
+
+  <script src="assets/js/site.js" defer></script>
 </head>
 
 <body>
-<header>
-  <nav aria-label="Primary navigation">
-    <a href="index.html">Home</a>
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
 
-    <details class="nav-dropdown">
-      <summary>DFM</summary>
-      <div class="nav-dropdown-menu">
-        <a href="boards.html#dfm-objective-1">Objective 1</a>
-        <a href="boards.html#dfm-objective-2">Objective 2</a>
-        <a href="boards.html#dfm-objective-3">Objective 3</a>
-        <a href="boards.html#dfm-objective-4">Objective 4</a>
-        <a href="boards.html#dfm-objective-5">Objective 5</a>
-        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      <details class="nav-dropdown">
+        <summary>DMF</summary>
+
+        <div class="nav-dropdown-menu card">
+          <a href="boards.html#dmf-objective-1">Objective 1</a>
+          <a href="boards.html#dmf-objective-2">Objective 2</a>
+          <a href="boards.html#dmf-objective-3">Objective 3</a>
+          <a href="boards.html#dmf-objective-4">Objective 4</a>
+          <a href="boards.html#dmf-objective-5">Objective 5</a>
+          <a href="boards.html#dmf-objective-6">Objective 6</a>
+        </div>
+      </details>
+
+      <details class="nav-dropdown">
+        <summary>RBT</summary>
+
+        <div class="nav-dropdown-menu card">
+          <a href="boards.html#rbt-objective-1">Objective 1</a>
+          <a href="boards.html#rbt-objective-2">Objective 2</a>
+          <a href="boards.html#rbt-objective-3">Objective 3</a>
+          <a href="boards.html#rbt-objective-4">Objective 4</a>
+          <a href="boards.html#rbt-objective-5">Objective 5</a>
+          <a href="boards.html#rbt-objective-6">Objective 6</a>
+        </div>
+      </details>
+
+      <a href="sip.html">SIP</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Boards Objectives</h1>
+
+    <p class="small boards-intro">
+      Select a degree program to review its six objectives and the projects used
+      to demonstrate each competency. Complete photographs, CAD files, technical
+      drawings, reports, presentations, and videos are organized by project on
+      the Projects and SIP pages.
+    </p>
+
+    <details class="degree-dropdown" id="dmf-boards" open>
+      <summary>
+        <span>Digital Maker and Fabrication (DMF)</span>
+        <small>6 objectives</small>
+      </summary>
+
+      <div class="degree-content">
+        <nav
+          class="objective-jump-list"
+          aria-label="Digital Maker and Fabrication objectives"
+        >
+          <a class="btn" href="#dmf-objective-1">Objective 1</a>
+          <a class="btn" href="#dmf-objective-2">Objective 2</a>
+          <a class="btn" href="#dmf-objective-3">Objective 3</a>
+          <a class="btn" href="#dmf-objective-4">Objective 4</a>
+          <a class="btn" href="#dmf-objective-5">Objective 5</a>
+          <a class="btn" href="#dmf-objective-6">Objective 6</a>
+        </nav>
+
+        <section class="card" aria-labelledby="dmf-evaluation-heading">
+          <h2 id="dmf-evaluation-heading">
+            Digital Maker and Fabrication Evaluation
+          </h2>
+
+          <p>
+            The Boards evaluation demonstrates to Subject Matter Experts that I
+            have developed the knowledge, technical ability, and professional
+            competency required by the Digital Maker and Fabrication program at
+            the University of Advancing Technology.
+          </p>
+
+          <p>
+            Each objective below identifies the projects used to demonstrate that
+            competency and explains how the work satisfies the objective. Detailed
+            project evidence is maintained separately to avoid duplicating files
+            throughout the portfolio.
+          </p>
+
+          <div class="button-row">
+            <a class="btn" href="projects.html">View All Projects</a>
+            <a class="btn btn-secondary" href="sip.html">
+              View Student Innovation Project
+            </a>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-1">
+          <h2>DMF Objective 1</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Using digital and physical tools, engineer and build prototypes
+              that technology patents are then applied for.
+            </strong>
+          </p>
+
+          <p class="small">
+            Related courses: DBM100, DBM150, DBM215, TCH410, TCH270, TCH200
+          </p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Perpetual Planter</h3>
+
+              <p>
+                The Perpetual Planter is an original reusable insert that converts
+                a standard planter into a passive water reservoir. Fusion 360 was
+                used to create and revise the internal geometry, define dimensions,
+                and evaluate the part through structural simulation before physical
+                production.
+              </p>
+
+              <p>
+                The design addresses overwatering, underwatering, and root rot while
+                allowing the user to retain an existing planter. Its documented
+                function, construction, revisions, dimensions, and alternative
+                configurations support continued patent-development work.
+              </p>
+
+              <ul>
+                <li>Original functional product concept</li>
+                <li>CAD development and multiple revisions</li>
+                <li>Structural simulation and dimensional documentation</li>
+                <li>Patent proposal and product variations</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#perpetual-planter">
+                  View Perpetual Planter Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Project C2: Capillary Canopy</h3>
+
+              <p>
+                Project C2 is a modular terrarium lid engineered to manage moisture
+                and enclosure conditions through passive geometry. The system combines
+                condensation routing, vent control, sealed fitment, and optional
+                water-transfer features in a set of 3D-printed components.
+              </p>
+
+              <p>
+                The project progressed from an innovation claim through CAD revisions,
+                physical prototypes, environmental testing, technical drawings, and a
+                final SIP brief. This work documents the construction, operation,
+                variations, and intended function of the invention.
+              </p>
+
+              <ul>
+                <li>Original innovation claim</li>
+                <li>CAD and additive-manufacturing development</li>
+                <li>Multiple tested physical revisions</li>
+                <li>Technical drawings and final SIP documentation</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="sip.html">
+                  View Project C2
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-2">
+          <h2>DMF Objective 2</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Build physical products while demonstrating technique and safety
+              competency across commonly accepted prototyping devices, maker tools,
+              and techniques.
+            </strong>
+          </p>
+
+          <p class="small">
+            Related courses: DBM150, DBM215, TCH410, TCH270, TCH200
+          </p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Screw School / Screw Stack</h3>
+
+              <p>
+                Screw Stack demonstrates the complete transition from a digital model
+                to a manufactured storage product. Fusion 360 was used to create the
+                tray geometry, screw openings, stacking pegs, labels, and connection
+                features. The parts were sliced, printed, assembled, and tested with
+                actual screws.
+              </p>
+
+              <p>
+                Revisions corrected disconnected pegs, failed text, and slot geometry
+                that did not guide screws properly. This required competent and safe use
+                of CAD, slicing software, additive-manufacturing equipment, materials,
+                and physical assembly techniques.
+              </p>
+
+              <ul>
+                <li>Fusion 360 design and revision</li>
+                <li>Bambu Studio print preparation</li>
+                <li>Multiple manufactured prototypes</li>
+                <li>Physical assembly and fit testing</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#screw-stack">
+                  View Screw Stack Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Four-Gear Mechanism</h3>
+
+              <p>
+                The Four-Gear Mechanism is a working mechanical assembly made from
+                separate 12-, 24-, 36-, and 48-tooth gears installed on a custom
+                mounting plate. Center distances were calculated from the gear radii
+                so the teeth would engage correctly.
+              </p>
+
+              <p>
+                The finished assembly was manufactured, assembled, and tested as a
+                connected mechanism with an overall 1:4 relationship. The process
+                required accurate CAD construction, mechanical spacing, component
+                organization, joint setup, and motion testing.
+              </p>
+
+              <ul>
+                <li>Four functional gear components</li>
+                <li>Calculated mounting distances</li>
+                <li>Custom supporting base plate</li>
+                <li>Physical assembly and motion testing</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#four-gear-mechanism">
+                  View Four-Gear Project
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-3">
+          <h2>DMF Objective 3</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Produce products that balance form and function while reflecting
+              current and future trends in design and human factors.
+            </strong>
+          </p>
+
+          <p class="small">
+            Related courses: DBM100, DBM215, TCH410, TCH270, TCH200, TCH100
+          </p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Modular Launch Glider</h3>
+
+              <p>
+                The Modular Launch Glider balances aerodynamic form with the
+                manufacturing and assembly requirements of a 3D-printed aircraft.
+                Its wing shape, stabilizers, tail, connector, and launcher interface
+                support flight while remaining practical to manufacture and assemble.
+              </p>
+
+              <p>
+                The approximately 19-inch wingspan, modular construction, alignment
+                features, and launcher were developed around performance, handling,
+                transportation, repair, and user interaction.
+              </p>
+
+              <ul>
+                <li>Aerodynamic form with printable construction</li>
+                <li>Modular wing, tail, and connector components</li>
+                <li>Alignment and launcher features</li>
+                <li>Assembly and handling considerations</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#dbm-plane">
+                  View Modular Launch Glider Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Dozer Mouse</h3>
+
+              <p>
+                The Dozer Mouse is a functional computer-mouse design built around a
+                construction-equipment theme. Exposed mechanical forms, track-inspired
+                textures, contrasting colors, and a wrist-support concept give the
+                product a distinct visual identity.
+              </p>
+
+              <p>
+                The enclosure still had to fit the electronic components and provide
+                access to the buttons, scroll wheel, optical sensor, and grip surfaces.
+                Sketches and CAD revisions were used to examine comfort, hand position,
+                hardware fit, appearance, and usability.
+              </p>
+
+              <ul>
+                <li>Designed around required mouse components</li>
+                <li>Grip, hand-position, and wrist-support considerations</li>
+                <li>Distinct construction-equipment styling</li>
+                <li>Balanced visual identity and hardware function</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#dozer-mouse">
+                  View Dozer Mouse Project
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-4">
+          <h2>DMF Objective 4</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Demonstrate the ability to evaluate material and build-technique
+              options during the creation of products and their prototypes.
+            </strong>
+          </p>
+
+          <p class="small">
+            Related courses: DBM150, DBM215, TCH410, TCH270, TCH200
+          </p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Modular Launch Glider</h3>
+
+              <p>
+                The Modular Launch Glider required evaluating how the aircraft could
+                be divided, printed, assembled, and reinforced while remaining light
+                enough to fly. Development considered print orientation, joining
+                methods, wall thickness, impact areas, strength, and weight.
+              </p>
+
+              <p>
+                Simulation and prototype revisions identified concentrated stress and
+                likely failure areas. The launcher was also developed to align with the
+                glider, contact the nose correctly, and absorb force during launch.
+              </p>
+
+              <ul>
+                <li>Modular and assembled construction comparison</li>
+                <li>Stress and failure-area evaluation</li>
+                <li>Additive-manufacturing constraints</li>
+                <li>Strength, weight, and printability balance</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#dbm-plane">
+                  View Modular Launch Glider Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Screw School / Screw Stack</h3>
+
+              <p>
+                Screw Stack involved comparing PLA and PETG, evaluating 3D printing
+                and CNC production, and repeatedly changing component geometry. The
+                selected material needed enough flexibility to accept screws without
+                cracking while remaining durable during repeated use.
+              </p>
+
+              <p>
+                Manufacturing tests showed that font size, nozzle capability, peg
+                attachment, fillet depth, slot dimensions, and screw spacing directly
+                affected the finished product. Prototype failures were used to guide
+                material and manufacturing changes.
+              </p>
+
+              <ul>
+                <li>PLA and PETG comparison</li>
+                <li>3D-printing and CNC-process evaluation</li>
+                <li>Slot, fillet, peg, and label revisions</li>
+                <li>Manufacturing results used to guide changes</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#screw-stack">
+                  View Screw Stack Project
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-5">
+          <h2>DMF Objective 5</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Demonstrate the ability to effectively implement embedded systems
+              and fundamental electronics into product builds.
+            </strong>
+          </p>
+
+          <p class="small">
+            Related courses: RBT173, RBT211, TCH410, TCH270
+          </p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Dozer Mouse</h3>
+
+              <p>
+                The Dozer Mouse integrates a wireless mouse electronics kit into a
+                custom-designed and 3D-printed enclosure. The enclosure was developed
+                around the circuit board, optical sensor, scroll wheel, switches,
+                battery connection, and wireless receiver.
+              </p>
+
+              <p>
+                Internal clearances, mounting points, sensor openings, button movement,
+                and component access must align with the electronic system for the
+                product to function.
+              </p>
+
+              <ul>
+                <li>Wireless mouse electronics kit</li>
+                <li>Internal component support and clearance</li>
+                <li>Sensor, switches, wheel, power, and circuit-board integration</li>
+                <li>Custom-manufactured electronics enclosure</li>
+              </ul>
+
+              <p class="project-status">Status: Final assembly in progress.</p>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#dozer-mouse">
+                  View Dozer Mouse Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Gaia ESP32 Enclosure Monitor</h3>
+
+              <p>
+                The Gaia ESP32 Enclosure Monitor is a compact terrarium-monitoring
+                node that combines an ESP32-WROOM-32, DS18B20 digital temperature
+                sensor, and SSD1306 OLED display.
+              </p>
+
+              <p>
+                The ESP32 receives and processes sensor data before displaying the
+                current temperature on the OLED. The system demonstrates sensor input,
+                microcontroller processing, display output, power distribution, wiring,
+                and integration into a custom Fusion 360 enclosure.
+              </p>
+
+              <ul>
+                <li>ESP32-WROOM-32 microcontroller</li>
+                <li>DS18B20 digital temperature sensor</li>
+                <li>SSD1306 I2C OLED display</li>
+                <li>USB power and custom enclosure integration</li>
+              </ul>
+
+              <p class="project-status">Status: Working prototype.</p>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#gaia-monitor">
+                  View Gaia Monitor Project
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="dmf-objective-6">
+          <h2>DMF Objective 6</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Place prototypes and builds within the Agile and MVP development
+              frameworks.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: DBM215, DBM360</p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Perpetual Planter</h3>
+
+              <p>
+                The Perpetual Planter began as a focused passive MVP that converted
+                a standard planter into a reservoir. Multiple mesh-disc versions,
+                dimensional revisions, and simulations were then used to improve the
+                product without expanding the first prototype beyond its core purpose.
+              </p>
+
+              <p>
+                Water-level sensing, soil-moisture monitoring, temperature monitoring,
+                LEDs, and multi-pot communication were identified as later development
+                possibilities rather than requirements for the initial functional build.
+              </p>
+
+              <ul>
+                <li>Focused passive MVP</li>
+                <li>Multiple compared design iterations</li>
+                <li>Simulation used to identify overengineering</li>
+                <li>Essential and future features separated</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#perpetual-planter">
+                  View Perpetual Planter Project
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>Project C2: Capillary Canopy</h3>
+
+              <p>
+                Project C2 followed a documented design-build-test-revise process
+                across four major prototype versions. Each revision responded to
+                evidence from fitment, condensation, evaporation, ventilation,
+                humidity, and water-transfer testing.
+              </p>
+
+              <p>
+                The MVP focused on proving that a fitted 3D-printed lid could influence
+                the terrarium environment through passive geometry. Features were
+                simplified, revised, or removed when testing showed that they did not
+                perform as expected.
+              </p>
+
+              <ul>
+                <li>Repeated prototype revisions</li>
+                <li>Testing results used to prioritize changes</li>
+                <li>Failed features revised or removed</li>
+                <li>Milestones, results, and next steps documented</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn" href="sip.html">
+                  View Project C2
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
     </details>
 
-    <details class="nav-dropdown">
-      <summary>RBT</summary>
-      <div class="nav-dropdown-menu">
-        <a href="boards.html#rbt-objective-1">Objective 1</a>
-        <a href="boards.html#rbt-objective-2">Objective 2</a>
-        <a href="boards.html#rbt-objective-3">Objective 3</a>
-        <a href="boards.html#rbt-objective-4">Objective 4</a>
-        <a href="boards.html#rbt-objective-5">Objective 5</a>
-        <a href="boards.html#rbt-objective-6">Objective 6</a>
-      </div>
-    </details>
+    <details class="degree-dropdown" id="rbt-boards">
+      <summary>
+        <span>Robotics and Embedded Systems (RBT)</span>
+        <small>6 objectives</small>
+      </summary>
 
-    <a href="sip.html">SIP</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<main>
-  <h1>Boards Objectives</h1>
-  <p class="small boards-intro">
-    Select a degree program to review its six objectives and supporting project evidence.
-  </p>
-
-  <details class="degree-dropdown" id="dfm-boards" open>
-    <summary>
-      <span>Digital Maker and Fabrication (DFM)</span>
-      <small>6 objectives</small>
-    </summary>
-    <div class="degree-content">
-      <nav class="objective-jump-list" aria-label="Digital Maker and Fabrication objectives">
-          <a class="btn" href="#dfm-objective-1">Objective 1</a>
-          <a class="btn" href="#dfm-objective-2">Objective 2</a>
-          <a class="btn" href="#dfm-objective-3">Objective 3</a>
-          <a class="btn" href="#dfm-objective-4">Objective 4</a>
-          <a class="btn" href="#dfm-objective-5">Objective 5</a>
-          <a class="btn" href="#dfm-objective-6">Objective 6</a>
-      </nav>
-  <div class="card">
-    <h2>Digital Maker and Fabrication Evaluation</h2>
-
-    <p>
-      The purpose of the Boards evaluation is to demonstrate to Subject Matter Experts
-      in the Digital Maker and Fabrication program that I have developed the knowledge,
-      technical ability, and professional competency required to graduate from UAT.
-    </p>
-
-    <p>
-      The Digital Maker and Fabrication degree contains six program objectives. Each
-      objective represents a major area of competency developed through specific courses
-      in the program. The course and objective chart below shows where these skills are
-      introduced, practiced, and applied throughout the degree.
-    </p>
-
-    <img
-      src="assets/img/objectives.png"
-      alt="Digital Maker and Fabrication courses associated with the six program objectives"
-    />
-
-    <p class="image-caption">
-      Digital Maker and Fabrication program objectives and the courses associated with
-      each objective.
-    </p>
-
-    <p>
-      Each objective on this page is supported by at least two projects selected from my
-      UAT coursework, Student Innovation Project, and independent design work.
-    </p>
-
-    <p>
-      The explanations on this page focus on <strong>how</strong> each project demonstrates the objective.<br>
-      The supporting photographs, CAD models, technical drawings, simulations, presentations,<br>
-      testing records, and videos are located on the Projects and SIP pages.
-    </p>
-
-    <div class="button-row">
-      <a class="btn" href="projects.html">View Supporting Projects</a>
-      <a class="btn" href="sip.html">View Student Innovation Project</a>
-    </div>
-  </div>
-
-  <!-- OBJECTIVE 1 -->
-  <section class="card" id="dfm-objective-1">
-    <h2>Objective 1</h2>
-
-    <p>
-      <strong>
-        Using digital and physical tools, engineer and build prototypes that technology
-        patents are then applied for.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: DBM100, DBM150, DBM215, TCH410, TCH270, TCH200
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Perpetual Planter</h3>
-
-        <p>
-          The Perpetual Planter meets this objective through the engineering of a reusable
-          insert that converts a standard planter into a passive water reservoir. Fusion 360
-          was used to create the design, refine the internal mesh geometry, define the
-          dimensions, and simulate the strength of the part before manufacturing.
-        </p>
-
-        <p>
-          The project was developed around a specific problem: reducing accidental
-          overwatering, underwatering, and root rot without requiring the user to replace
-          an existing planter. The resulting prototype has a defined function, documented
-          construction, multiple design versions, technical dimensions, and potential
-          alternative configurations. This provides the information needed to prepare the
-          product for the patent-application process.
-        </p>
-
-        <ul>
-          <li>Created as an original functional product concept</li>
-          <li>Designed and revised using Fusion 360</li>
-          <li>Evaluated through structural simulation</li>
-          <li>Documented with dimensions and product applications</li>
-          <li>Prepared for further patent-development documentation</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#perpetual-planter">
-            View Perpetual Planter Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Project C2: Capillary Canopy</h3>
-
-        <p>
-          Project C2 meets this objective through the engineering and physical production
-          of a modular terrarium lid designed to manage moisture and enclosure conditions
-          through passive geometry. The system combines condensation routing, vent control,
-          sealed fitment, and optional water-transfer features within a set of 3D-printed
-          components.
-        </p>
-
-        <p>
-          The project progressed from an innovation claim into multiple CAD revisions,
-          manufactured prototypes, environmental testing, technical drawings, and a final
-          SIP brief. The design process produced enough evidence to explain the problem,
-          construction, operation, variations, and intended function of the invention,
-          preparing the concept for possible patent development.
-        </p>
-
-        <ul>
-          <li>Developed from an original innovation claim</li>
-          <li>Created through CAD and additive manufacturing</li>
-          <li>Tested across multiple physical revisions</li>
-          <li>Documented with technical drawings and SIP materials</li>
-          <li>Prepared as a patent-ready prototype concept</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="sip.html">
-            View Full Project C2 Evidence
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card project-evidence" id="perpetual-planter-patent">
-      <h3>Perpetual Planter Patent Proposal</h3>
-
-      <p>
-        This proposal documents the Perpetual Planter concept, its intended function,
-        design features, development process, possible variations, and the supporting
-        information prepared for the patent-application process.
-      </p>
-
-      <iframe
-        class="pdf-viewer"
-        src="assets/docs/4p.pdf"
-        title="Perpetual Planter patent proposal"
-        loading="lazy"
-      >
-        <p>
-          Your browser cannot display the PDF.
-          <a href="assets/docs/4p.pdf">Open the Perpetual Planter patent proposal</a>.
-        </p>
-      </iframe>
-
-      <div class="button-row">
-        <a
-          class="btn"
-          href="assets/docs/4p.pdf"
-          target="_blank"
-          rel="noopener"
+      <div class="degree-content">
+        <nav
+          class="objective-jump-list"
+          aria-label="Robotics and Embedded Systems objectives"
         >
-          Open Full Patent Proposal
-        </a>
-
-        <a class="btn btn-secondary" href="projects.html#perpetual-planter">
-          View Perpetual Planter Project
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIVE 2 -->
-  <section class="card" id="dfm-objective-2">
-    <h2>Objective 2</h2>
-
-    <p>
-      <strong>
-        Build physical products while demonstrating technique and safety competency
-        across commonly accepted prototyping devices, maker tools, and techniques.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: DBM150, DBM215, TCH410, TCH270, TCH200
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Screw School / Screw Stack</h3>
-
-        <p>
-          Screw Stack meets this objective by demonstrating the complete transition from
-          a digital model to a manufactured physical storage product. Fusion 360 was used
-          to create the tray geometry, screw openings, stacking pegs, labels, and connection
-          features. The parts were then sliced, printed on a Bambu P1P, assembled, and tested
-          with actual screws.
-        </p>
-
-        <p>
-          Several manufacturing issues were identified during the process, including
-          disconnected pegs, small text disappearing after slicing, and slot geometry that
-          did not guide screws properly. Correcting these problems required competent use
-          of CAD, slicing software, additive-manufacturing settings, material handling,
-          printer operation, and physical assembly techniques.
-        </p>
-
-        <ul>
-          <li>Designed parts in Fusion 360</li>
-          <li>Prepared prints in Bambu Studio</li>
-          <li>Manufactured multiple physical revisions</li>
-          <li>Tested assembly, stacking, labeling, and screw fit</li>
-          <li>Applied safe 3D-printer and prototyping practices</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#screw-stack">
-            View Screw Stack Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card" id="four-gears">
-        <h3>Four-Gear Mechanism</h3>
-
-        <p>
-          The Four-Gear Mechanism meets this objective through the construction and testing
-          of a working mechanical assembly. Four gears containing 12, 24, 36, and 48 teeth
-          were created as separate components and installed on a custom mounting plate.
-        </p>
-
-        <p>
-          The center distances were calculated from the gear radii so that the teeth would
-          engage correctly. The final assembly was tested as a connected mechanism with an
-          overall 1:4 gear ratio. This required accurate CAD construction, component
-          organization, joint setup, mechanical spacing, and motion testing.
-        </p>
-
-        <ul>
-          <li>Created four functional gear components</li>
-          <li>Calculated mounting distances</li>
-          <li>Designed a supporting base plate</li>
-          <li>Assembled and tested the complete mechanism</li>
-          <li>Verified the intended 1:4 gear relationship</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="#four-gears-evidence">
-            View Four-Gear Evidence Below
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card project-evidence" id="four-gears-evidence">
-      <h3>Four-Gear Motion Simulation and Original Documentation</h3>
-
-      <p>
-        I created the motion simulation below in Fusion 360 using revolute joints and
-        calculated motion links. It demonstrates the alternating rotation of the four
-        gears and the overall 1:4 relationship between the 48-tooth and 12-tooth gears.
-      </p>
-
-      <video
-        class="project-video"
-        controls
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        aria-label="Fusion 360 motion simulation of the four-gear assembly"
-      >
-        <source src="assets/video/gears.mp4" type="video/mp4" />
-        <p>
-          Your browser cannot display the video.
-          <a href="assets/video/gears.mp4">Open the gear simulation video</a>.
-        </p>
-      </video>
-
-      <p class="small">
-        Fusion 360 mechanical motion simulation of the printed four-gear assembly.
-      </p>
-
-      <h4>Original Four-Gear Project</h4>
-
-      <p>
-        The original project document records the gear calculations, CAD development,
-        component organization, mechanical design, and initial project results.
-      </p>
-
-      <iframe
-        class="pdf-viewer"
-        src="assets/docs/gears.pdf"
-        title="Original Four-Gear Mechanism project documentation"
-        loading="lazy"
-      >
-        <p>
-          Your browser cannot display the PDF.
-          <a href="assets/docs/gears.pdf">Open the original gear project PDF</a>.
-        </p>
-      </iframe>
-
-      <div class="button-row">
-        <a
-          class="btn"
-          href="assets/docs/gears.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Open Full Project PDF
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="assets/video/gears.mp4"
-          target="_blank"
-          rel="noopener"
-        >
-          Open Simulation Video
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIVE 3 -->
-  <section class="card" id="dfm-objective-3">
-    <h2>Objective 3</h2>
-
-    <p>
-      <strong>
-        Produce products that balance form and function while reflecting current and
-        future trends in design and human factors.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: DBM100, DBM215, TCH410, TCH270, TCH200, TCH100
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Modular Launch Glider</h3>
-
-        <p>
-          The Modular Launch Glider meets this objective by balancing aerodynamic form
-          with the manufacturing and assembly requirements of a 3D-printed glider. The
-          design incorporated wing shape, stabilizers, a tail, a central connector, and
-          a launcher interface while remaining divided into parts that could be
-          manufactured and assembled.
-        </p>
-
-        <p>
-          The approximately 19-inch wingspan, modular construction, alignment features,
-          and launcher body were developed around physical performance rather than
-          appearance alone. The project also considered handling, assembly, transport,
-          repair, and user interaction with the launching system.
-        </p>
-
-        <ul>
-          <li>Balanced aerodynamic shape with printable construction</li>
-          <li>Created modular left wing, right wing, tail, and connector parts</li>
-          <li>Integrated alignment and launcher features</li>
-          <li>Considered assembly and physical handling</li>
-          <li>Used form to support flight and structural function</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#dbm-plane">
-            View Modular Launch Glider Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Dozer Mouse</h3>
-
-        <p>
-          The Dozer Mouse meets this objective through the design of a functional computer
-          mouse that deliberately moves away from the common smooth and minimal appearance
-          of consumer computer hardware. The product uses construction-equipment styling,
-          exposed mechanical forms, track-inspired textures, contrasting colors, and a
-          movable wrist-support concept.
-        </p>
-
-        <p>
-          The exterior still had to fit the required electronic components and allow the
-          user to reach the buttons, scroll wheel, sensor, and grip surfaces. Multiple
-          sketches and CAD revisions were used to examine comfort, hand position, button
-          access, structural support, appearance, and usability.
-        </p>
-
-        <ul>
-          <li>Designed around required mouse components</li>
-          <li>Considered grip, hand position, and wrist support</li>
-          <li>Developed a distinctive construction-equipment theme</li>
-          <li>Balanced visual identity with hardware function</li>
-          <li>Identified future ergonomic and usability improvements</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#dozer-mouse">
-            View Dozer Mouse Evidence
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIVE 4 -->
-  <section class="card" id="dfm-objective-4">
-    <h2>Objective 4</h2>
-
-    <p>
-      <strong>
-        Demonstrate the ability to evaluate material and build technique options during
-        the creation of products and their prototypes.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: DBM150, DBM215, TCH410, TCH270, TCH200
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Modular Launch Glider</h3>
-
-        <p>
-          The Modular Launch Glider meets this objective through the evaluation of how
-          a glider could be divided, printed, assembled, and reinforced while remaining
-          light enough to function. The design required decisions about component
-          orientation, joining methods, wall thickness, launcher contact, impact areas,
-          and the relationship between structural strength and total weight.
-        </p>
-
-        <p>
-          Digital simulation and prototype revisions helped identify areas of concentrated
-          stress and possible failure. The launcher body was also developed to align the
-          glider, sit against the nose, and absorb force during launch. These decisions show
-          that the construction method and geometry were evaluated throughout development.
-        </p>
-
-        <ul>
-          <li>Compared modular and assembled construction approaches</li>
-          <li>Evaluated stress and likely failure areas</li>
-          <li>Designed parts around additive-manufacturing limits</li>
-          <li>Balanced strength, weight, and printability</li>
-          <li>Revised the design using simulation and physical requirements</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#dbm-plane">
-            View Modular Launch Glider Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Screw School / Screw Stack</h3>
-
-        <p>
-          Screw Stack meets this objective through the comparison of PLA and PETG, the
-          evaluation of 3D printing and CNC production, and repeated changes to the
-          component geometry. The material needed enough flexibility to accept screws
-          without cracking while remaining durable enough to support repeated use.
-        </p>
-
-        <p>
-          Manufacturing tests revealed that font size, nozzle capability, peg attachment,
-          fillet depth, slot dimensions, and screw spacing directly affected the finished
-          product. The design was revised after these problems were observed, showing that
-          material and production decisions were based on real manufacturing results.
-        </p>
-
-        <ul>
-          <li>Compared PLA and PETG properties</li>
-          <li>Evaluated 3D printing against CNC production</li>
-          <li>Modified slots and fillets after testing</li>
-          <li>Corrected disconnected pegs and failed labels</li>
-          <li>Used prototype failures to guide manufacturing changes</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#screw-stack">
-            View Screw Stack Evidence
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIVE 5 -->
-  <section class="card" id="dfm-objective-5">
-    <h2>Objective 5</h2>
-
-    <p>
-      <strong>
-        Demonstrate the ability to effectively implement embedded systems and fundamental
-        electronics into product builds.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: RBT173, RBT211, TCH410, TCH270
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Dozer Mouse</h3>
-
-        <p>
-          The Dozer Mouse meets this objective by integrating a wireless mouse electronics
-          kit into a custom-designed and 3D-printed enclosure. The product was built around
-          the physical requirements of the circuit board, optical sensor, scroll wheel,
-          switches, battery connection, and wireless receiver.
-        </p>
-
-        <p>
-          The enclosure could not be designed as an independent decorative shell. Internal
-          clearances, mounting locations, sensor openings, button movement, and component
-          access had to align with the electronic system for the mouse to function. The
-          final evidence will include assembly and functional testing of cursor movement,
-          clicking, and scrolling.
-        </p>
-
-        <ul>
-          <li>Designed around an electronic mouse kit</li>
-          <li>Provided internal component clearance and support</li>
-          <li>Integrated sensor, switches, wheel, power, and circuit board</li>
-          <li>Manufactured a custom enclosure for the electronics</li>
-          <li>Functional demonstration pending final assembly</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#dozer-mouse">
-            View Dozer Mouse Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Gaia ESP32 Enclosure Monitor</h3>
-
-        <p>
-          The Gaia ESP32 Enclosure Monitor is being developed as a compact environmental
-          monitoring node for a terrarium. The MVP combines an ESP32-WROOM-32,
-          a DS18B20 digital temperature sensor, and a 0.96-inch SSD1306 OLED display.
-        </p>
-
-        <p>
-          The ESP32 receives temperature data from the sensor, processes the reading through
-          embedded code, and displays the result on the OLED. The completed build will place
-          the electronics into a custom Fusion 360 enclosure and will demonstrate sensor
-          input, microcontroller processing, display output, power distribution, wiring,
-          and physical product integration.
-        </p>
-
-        <ul>
-          <li>ESP32-WROOM-32 microcontroller</li>
-          <li>DS18B20 digital temperature sensor</li>
-          <li>SSD1306 I2C OLED display</li>
-          <li>USB-powered embedded system</li>
-          <li>Custom Fusion 360 housing pending</li>
-        </ul>
-
-        <p>
-          <strong>Status:</strong> Build and documentation in progress.
-        </p>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#gaia-monitor">
-            View Gaia Monitor Evidence
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIVE 6 -->
-  <section class="card" id="dfm-objective-6">
-    <h2>Objective 6</h2>
-
-    <p>
-      <strong>
-        Place prototypes and builds within the Agile and MVP development frameworks.
-      </strong>
-    </p>
-
-    <p class="small">
-      Related courses: DBM215, DBM360
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Perpetual Planter</h3>
-
-        <p>
-          The Perpetual Planter meets this objective by beginning with a simple passive MVP
-          before expanding into more advanced product concepts. The first usable version
-          focused on the essential function: converting a standard planter into a reservoir
-          that helps stabilize moisture and reduce watering mistakes.
-        </p>
-
-        <p>
-          Multiple mesh-disc versions, dimensional revisions, and structural simulations
-          were used to improve the product. Features such as water-level sensing, soil
-          moisture monitoring, temperature monitoring, LEDs, and multi-pot communication
-          were intentionally identified as future development rather than being required
-          for the first functional prototype.
-        </p>
-
-        <ul>
-          <li>Started with a focused passive MVP</li>
-          <li>Created and compared multiple design iterations</li>
-          <li>Used simulation to identify overengineering</li>
-          <li>Separated essential functions from future features</li>
-          <li>Established a clear path for continued development</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="projects.html#perpetual-planter">
-            View Perpetual Planter Evidence
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Project C2: Capillary Canopy</h3>
-
-        <p>
-          Project C2 meets this objective through a documented design-build-test-revise
-          process that progressed through four major prototype versions. Each revision
-          responded to evidence gathered from fitment, condensation, evaporation,
-          ventilation, humidity, and water-transfer testing.
-        </p>
-
-        <p>
-          The MVP focused on proving that a fitted 3D-printed lid could influence the
-          terrarium environment through passive geometry. More complex ideas were revised,
-          simplified, or removed when testing showed they did not perform as expected.
-          The final prototype established a working product direction while clearly
-          documenting limitations and future improvements.
-        </p>
-
-        <ul>
-          <li>Developed through repeated prototype revisions</li>
-          <li>Used testing results to prioritize changes</li>
-          <li>Removed or revised features that failed</li>
-          <li>Documented milestones, results, and next steps</li>
-          <li>Completed and passed as the final SIP project</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn" href="sip.html">
-            View Full Project C2 Evidence
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="card">
-    <h2>Supporting Project Evidence</h2>
-
-    <p>
-      Additional photographs, CAD images, technical drawings, presentations, videos,
-      manufacturing documentation, and testing results are available on the Projects
-      and SIP pages.
-    </p>
-
-    <div class="button-row">
-      <a class="btn" href="projects.html">View Other Projects</a>
-      <a class="btn" href="sip.html">View Project C2</a>
-    </div>
-  </div>
-
-    </div>
-  </details>
-
-  <details class="degree-dropdown" id="rbt-boards">
-    <summary>
-      <span>Robotics and Embedded Systems (RBT)</span>
-      <small>6 objectives</small>
-    </summary>
-    <div class="degree-content">
-      <nav class="objective-jump-list" aria-label="Robotics and Embedded Systems objectives">
           <a class="btn" href="#rbt-objective-1">Objective 1</a>
           <a class="btn" href="#rbt-objective-2">Objective 2</a>
           <a class="btn" href="#rbt-objective-3">Objective 3</a>
           <a class="btn" href="#rbt-objective-4">Objective 4</a>
           <a class="btn" href="#rbt-objective-5">Objective 5</a>
           <a class="btn" href="#rbt-objective-6">Objective 6</a>
-      </nav>
+        </nav>
 
-      <section class="card" id="rbt-objective-1">
-        <h2>Objective 1</h2>
-        <p><strong>Design and complete robotic and embedded systems solutions that apply to real-world situations and challenges.</strong></p>
-        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 1 review.</strong></p>
-        </div>
-      </section>
-
-      <section class="card" id="rbt-objective-2">
-        <h2>Objective 2</h2>
-        <p><strong>Implement a simple microprocessor using digital logic design.</strong></p>
-        <p class="small">Related courses: RBT131, RBT173</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 2 review.</strong></p>
-        </div>
-      </section>
-
-      <section class="card" id="rbt-objective-3">
-        <h2>Objective 3</h2>
-        <p><strong>Demonstrate embedded system design skills, including microcontroller selection, schematic design, printed circuit board layout, design for electromagnetic compatibility, and design for manufacturing.</strong></p>
-        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 3 review.</strong></p>
-        </div>
-      </section>
-
-      <section class="card" id="rbt-objective-4">
-        <h2>Objective 4</h2>
-        <p><strong>Apply knowledge of transducers, actuators, and simultaneous hardware and software development in the design of an embedded system.</strong></p>
-        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
-
-        <div class="card project-evidence">
-          <h3>Electronic Four-Gear System</h3>
+        <section class="card" aria-labelledby="rbt-evaluation-heading">
+          <h2 id="rbt-evaluation-heading">
+            Robotics and Embedded Systems Evaluation
+          </h2>
 
           <p>
-            I am expanding the printed four-gear mechanism into an embedded system that
-            uses a DC gearmotor as the actuator, a quadrature encoder as the transducer,
-            an ESP32 as the controller, and a TB6612FNG driver as the motor-power
-            interface. The completed system will compare encoder feedback with a target
-            speed and adjust the motor command through closed-loop software.
+            This section maps Robotics and Embedded Systems projects to the six
+            program objectives. Project details and supporting evidence remain on
+            the Projects page so each build has one complete, organized record.
           </p>
-
-          <p>
-            The Fusion 360 simulation documents the current mechanical behavior and
-            verifies the gear relationships before the motor bracket and shaft adapter
-            are manufactured. Electrical operation and closed-loop control will be
-            documented separately after the physical electronics are assembled.
-          </p>
-
-          <video
-            class="project-video"
-            controls
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-label="Fusion 360 motion simulation supporting the electronic four-gear system"
-          >
-            <source src="assets/video/gears.mp4" type="video/mp4" />
-            <p>
-              Your browser cannot display the video.
-              <a href="assets/video/gears.mp4">Open the gear simulation video</a>.
-            </p>
-          </video>
-
-          <iframe
-            class="pdf-viewer"
-            src="assets/docs/gears.pdf"
-            title="Original Four-Gear Mechanism project documentation"
-            loading="lazy"
-          >
-            <p>
-              Your browser cannot display the PDF.
-              <a href="assets/docs/gears.pdf">Open the original gear project PDF</a>.
-            </p>
-          </iframe>
 
           <div class="button-row">
-            <a
-              class="btn"
-              href="assets/docs/gears.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Original Project PDF
-            </a>
-
-            <a class="btn btn-secondary" href="#four-gears-evidence">
-              View DFM Project Evidence
-            </a>
+            <a class="btn" href="projects.html">View All Projects</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="card" id="rbt-objective-5">
-        <h2>Objective 5</h2>
-        <p><strong>Design and analyze real-time embedded systems, including advanced digital logic design, signal processing, and high-speed digital systems.</strong></p>
-        <p class="small">Related courses: RBT131, RBT211</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 5 review.</strong></p>
-        </div>
-      </section>
+        <section class="card" id="rbt-objective-1">
+          <h2>RBT Objective 1</h2>
 
-      <section class="card" id="rbt-objective-6">
-        <h2>Objective 6</h2>
-        <p><strong>Implement and evaluate algorithms and methods enabling autonomy in a mobile robot.</strong></p>
-        <p class="small">Related courses: RBT173, RBT347</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 6 review.</strong></p>
-        </div>
-      </section>
-    </div>
-  </details>
-</main>
+          <p class="objective-statement">
+            <strong>
+              Design and complete robotic and embedded-systems solutions that
+              apply to real-world situations and challenges.
+            </strong>
+          </p>
 
-<footer>
-  © <span id="y"></span> Timothy R. Williams
-</footer>
+          <p class="small">Related courses: RBT173, RBT211, RBT347</p>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 6 review.</strong></p>
-        </div>
-      </section>
-    </div>
-  </details>
-</main>
+          <div class="mapping-pending">
+            <p>
+              <strong>Project mapping will be completed during the Objective 1 review.</strong>
+            </p>
+          </div>
+        </section>
 
-<footer>
-  © <span id="y"></span> Timothy R. Williams
-</footer>
+        <section class="card" id="rbt-objective-2">
+          <h2>RBT Objective 2</h2>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+          <p class="objective-statement">
+            <strong>
+              Implement a simple microprocessor using digital logic design.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: RBT131, RBT173</p>
+
+          <div class="mapping-pending">
+            <p>
+              <strong>Project mapping will be completed during the Objective 2 review.</strong>
+            </p>
+          </div>
+        </section>
+
+        <section class="card" id="rbt-objective-3">
+          <h2>RBT Objective 3</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Demonstrate embedded-system design skills, including microcontroller
+              selection, schematic design, printed-circuit-board layout, design for
+              electromagnetic compatibility, and design for manufacturing.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: RBT173, RBT211, RBT347</p>
+
+          <div class="mapping-pending">
+            <p>
+              <strong>Project mapping will be completed during the Objective 3 review.</strong>
+            </p>
+          </div>
+        </section>
+
+        <section class="card" id="rbt-objective-4">
+          <h2>RBT Objective 4</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Apply knowledge of transducers, actuators, and simultaneous hardware
+              and software development in the design of an embedded system.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: RBT173, RBT211, RBT347</p>
+
+          <div class="grid">
+            <article class="card project-card">
+              <h3>Electronic Four-Gear System</h3>
+
+              <p>
+                The printed Four-Gear Mechanism is being expanded into an embedded
+                system using a DC gearmotor as the actuator, a quadrature encoder as
+                the transducer, an ESP32 as the controller, and a TB6612FNG driver as
+                the motor-power interface.
+              </p>
+
+              <p>
+                The finished system will compare encoder feedback with a target speed
+                and adjust the motor command through closed-loop software. Mechanical
+                behavior and gear relationships were established before development of
+                the motor bracket, shaft adapter, and electronics integration.
+              </p>
+
+              <ul>
+                <li>DC gearmotor actuator</li>
+                <li>Quadrature-encoder feedback</li>
+                <li>ESP32 processing and control</li>
+                <li>TB6612FNG motor driver</li>
+                <li>Planned closed-loop speed control</li>
+              </ul>
+
+              <p class="project-status">
+                Status: Electronics integration in progress.
+              </p>
+
+              <div class="button-row">
+                <a class="btn" href="projects.html#electronic-four-gear-system">
+                  View Electronic Four-Gear Project
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="rbt-objective-5">
+          <h2>RBT Objective 5</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Design and analyze real-time embedded systems, including advanced
+              digital logic design, signal processing, and high-speed digital systems.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: RBT131, RBT211</p>
+
+          <div class="mapping-pending">
+            <p>
+              <strong>Project mapping will be completed during the Objective 5 review.</strong>
+            </p>
+          </div>
+        </section>
+
+        <section class="card" id="rbt-objective-6">
+          <h2>RBT Objective 6</h2>
+
+          <p class="objective-statement">
+            <strong>
+              Implement and evaluate algorithms and methods enabling autonomy in
+              a mobile robot.
+            </strong>
+          </p>
+
+          <p class="small">Related courses: RBT173, RBT347</p>
+
+          <div class="mapping-pending">
+            <p>
+              <strong>Project mapping will be completed during the Objective 6 review.</strong>
+            </p>
+          </div>
+        </section>
+      </div>
+    </details>
+
+    <section class="card boards-footer-links" aria-labelledby="project-records-heading">
+      <h2 id="project-records-heading">Complete Project Records</h2>
+
+      <p>
+        All photographs, videos, PDF reports, CAD images, technical drawings,
+        manufacturing records, presentations, code, and testing results are stored
+        with their individual projects instead of being repeated on this page.
+      </p>
+
+      <div class="button-row">
+        <a class="btn" href="projects.html">View Project Records</a>
+        <a class="btn btn-secondary" href="sip.html">View Project C2</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="current-year"></span> Timothy R. Williams
+    </p>
+  </footer>
 </body>
 </html>
