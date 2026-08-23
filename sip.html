@@ -5,15 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SIP | Timothy R. Williams</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > summary { cursor: pointer; list-style: none; }
+    .nav-dropdown > summary::-webkit-details-marker { display: none; }
+    .nav-dropdown > summary::after { content: " ▾"; font-size: 0.8em; }
+    .nav-dropdown[open] > summary::after { content: " ▴"; }
+    .nav-dropdown-menu { display: grid; gap: 0.35rem; min-width: 13rem; padding: 0.75rem; }
+    .sip-intro { max-width: 850px; }
+    .sip-jump-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1.25rem 0 2rem;
+    }
+    .sip-jump-list a { text-align: center; }
+    @media (min-width: 801px) {
+      header nav { display: flex; align-items: center; }
+      .nav-dropdown-menu { position: absolute; z-index: 10; top: calc(100% + 0.35rem); left: 0; }
+    }
+    @media (max-width: 800px) {
+      .nav-dropdown-menu { padding-left: 1rem; }
+      .sip-jump-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 
 <body>
 <header>
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
-    <a href="sip.html" class="active">SIP</a>
-    <a href="boards.html">Boards</a>
-    <a href="projects.html">Projects | Objectives</a>
+
+    <details class="nav-dropdown">
+      <summary>DFM</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#dfm-objective-1">Objective 1</a>
+        <a href="boards.html#dfm-objective-2">Objective 2</a>
+        <a href="boards.html#dfm-objective-3">Objective 3</a>
+        <a href="boards.html#dfm-objective-4">Objective 4</a>
+        <a href="boards.html#dfm-objective-5">Objective 5</a>
+        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <details class="nav-dropdown">
+      <summary>RBT</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#rbt-objective-1">Objective 1</a>
+        <a href="boards.html#rbt-objective-2">Objective 2</a>
+        <a href="boards.html#rbt-objective-3">Objective 3</a>
+        <a href="boards.html#rbt-objective-4">Objective 4</a>
+        <a href="boards.html#rbt-objective-5">Objective 5</a>
+        <a href="boards.html#rbt-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <a href="sip.html" class="active" aria-current="page">SIP</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -21,11 +70,20 @@
 <main>
   <h1>SIP: Project C2 — Capillary Canopy</h1>
 
-  <p class="small">
+  <p class="small sip-intro">
     Completed Student Innovation Project • SIP311 • SIP408 • SIP409 • Testing • Revisions
   </p>
 
-  <div class="card">
+  <nav class="sip-jump-list" aria-label="Project C2 section index">
+    <a class="btn" href="#project-summary">Project Summary</a>
+    <a class="btn" href="#prototype-timeline">Prototype Timeline</a>
+    <a class="btn" href="#testing-results">Testing Results</a>
+    <a class="btn" href="#technical-drawings">Technical Drawings</a>
+    <a class="btn" href="#sip-brief">SIP Brief</a>
+    <a class="btn" href="#boards-connection">Boards Connection</a>
+  </nav>
+
+  <div class="card" id="project-summary">
     <h2>Innovation Claim</h2>
 
     <p>
@@ -69,7 +127,7 @@
 
     <div class="button-row">
       <a class="btn" href="boards.html">
-        View DFM Boards Objectives
+        View DFM Objectives
       </a>
     </div>
   </div>
@@ -95,7 +153,7 @@
     </ul>
   </div>
 
-  <div class="card">
+  <div class="card" id="prototype-timeline">
     <h2>Prototype Progress Timeline</h2>
 
     <p class="small">
@@ -267,7 +325,7 @@
     </ul>
   </div>
 
-  <div class="card">
+  <div class="card" id="testing-results">
     <h2>Testing and Observations</h2>
 
     <p class="small">
@@ -335,8 +393,8 @@
     </div>
   </div>
 
-  <div class="card">
-    <h2>Appendix A</h2>
+  <div class="card" id="technical-drawings">
+    <h2>Technical Drawings</h2>
 
     <div class="grid">
       <div class="card">
@@ -434,7 +492,7 @@
     </ul>
   </div>
 
-  <div class="card">
+  <div class="card" id="sip-brief">
     <h2>SIP Brief</h2>
 
     <p>
@@ -454,7 +512,7 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="boards-connection">
     <h2>Boards Connection</h2>
 
     <p>
@@ -464,11 +522,11 @@
     </p>
 
     <div class="button-row">
-      <a class="btn" href="boards.html#objective-1">
+      <a class="btn" href="boards.html#dfm-objective-1">
         View Objective 1
       </a>
 
-      <a class="btn" href="boards.html#objective-6">
+      <a class="btn" href="boards.html#dfm-objective-6">
         View Objective 6
       </a>
     </div>
