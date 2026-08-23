@@ -39,11 +39,35 @@
 
 <body>
 <header>
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
+
+    <details class="nav-dropdown">
+      <summary>DFM</summary>
+      <div class="nav-dropdown-menu">
+        <a href="boards.html#dfm-objective-1">Objective 1</a>
+        <a href="boards.html#dfm-objective-2">Objective 2</a>
+        <a href="boards.html#dfm-objective-3">Objective 3</a>
+        <a href="boards.html#dfm-objective-4">Objective 4</a>
+        <a href="boards.html#dfm-objective-5">Objective 5</a>
+        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <details class="nav-dropdown">
+      <summary>RBT</summary>
+      <div class="nav-dropdown-menu">
+        <a href="boards.html#rbt-objective-1">Objective 1</a>
+        <a href="boards.html#rbt-objective-2">Objective 2</a>
+        <a href="boards.html#rbt-objective-3">Objective 3</a>
+        <a href="boards.html#rbt-objective-4">Objective 4</a>
+        <a href="boards.html#rbt-objective-5">Objective 5</a>
+        <a href="boards.html#rbt-objective-6">Objective 6</a>
+      </div>
+    </details>
+
     <a href="sip.html">SIP</a>
-    <a href="boards.html" class="active">Boards</a>
-    <a href="projects.html">Projects | Objectives</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -195,6 +219,43 @@
         </div>
       </div>
     </div>
+
+    <div class="card project-evidence" id="perpetual-planter-patent">
+      <h3>Perpetual Planter Patent Proposal</h3>
+
+      <p>
+        This proposal documents the Perpetual Planter concept, its intended function,
+        design features, development process, possible variations, and the supporting
+        information prepared for the patent-application process.
+      </p>
+
+      <iframe
+        class="pdf-viewer"
+        src="assets/docs/4p.pdf"
+        title="Perpetual Planter patent proposal"
+        loading="lazy"
+      >
+        <p>
+          Your browser cannot display the PDF.
+          <a href="assets/docs/4p.pdf">Open the Perpetual Planter patent proposal</a>.
+        </p>
+      </iframe>
+
+      <div class="button-row">
+        <a
+          class="btn"
+          href="assets/docs/4p.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open Full Patent Proposal
+        </a>
+
+        <a class="btn btn-secondary" href="projects.html#perpetual-planter">
+          View Perpetual Planter Project
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- OBJECTIVE 2 -->
@@ -247,7 +308,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="four-gears">
         <h3>Four-Gear Mechanism</h3>
 
         <p>
@@ -272,10 +333,80 @@
         </ul>
 
         <div class="button-row">
-          <a class="btn" href="projects.html#four-gears">
-            View Four-Gear Mechanism Evidence
+          <a class="btn" href="#four-gears-evidence">
+            View Four-Gear Evidence Below
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="card project-evidence" id="four-gears-evidence">
+      <h3>Four-Gear Motion Simulation and Original Documentation</h3>
+
+      <p>
+        I created the motion simulation below in Fusion 360 using revolute joints and
+        calculated motion links. It demonstrates the alternating rotation of the four
+        gears and the overall 1:4 relationship between the 48-tooth and 12-tooth gears.
+      </p>
+
+      <video
+        class="project-video"
+        controls
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="Fusion 360 motion simulation of the four-gear assembly"
+      >
+        <source src="assets/video/gears.mp4" type="video/mp4" />
+        <p>
+          Your browser cannot display the video.
+          <a href="assets/video/gears.mp4">Open the gear simulation video</a>.
+        </p>
+      </video>
+
+      <p class="small">
+        Fusion 360 mechanical motion simulation of the printed four-gear assembly.
+      </p>
+
+      <h4>Original Four-Gear Project</h4>
+
+      <p>
+        The original project document records the gear calculations, CAD development,
+        component organization, mechanical design, and initial project results.
+      </p>
+
+      <iframe
+        class="pdf-viewer"
+        src="assets/docs/gears.pdf"
+        title="Original Four-Gear Mechanism project documentation"
+        loading="lazy"
+      >
+        <p>
+          Your browser cannot display the PDF.
+          <a href="assets/docs/gears.pdf">Open the original gear project PDF</a>.
+        </p>
+      </iframe>
+
+      <div class="button-row">
+        <a
+          class="btn"
+          href="assets/docs/gears.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open Full Project PDF
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="assets/video/gears.mp4"
+          target="_blank"
+          rel="noopener"
+        >
+          Open Simulation Video
+        </a>
       </div>
     </div>
   </section>
@@ -681,8 +812,68 @@
         <h2>Objective 4</h2>
         <p><strong>Apply knowledge of transducers, actuators, and simultaneous hardware and software development in the design of an embedded system.</strong></p>
         <p class="small">Related courses: RBT173, RBT211, RBT347</p>
-        <div class="evidence-placeholder">
-          <p><strong>Project evidence will be added during the Objective 4 review.</strong></p>
+
+        <div class="card project-evidence">
+          <h3>Electronic Four-Gear System</h3>
+
+          <p>
+            I am expanding the printed four-gear mechanism into an embedded system that
+            uses a DC gearmotor as the actuator, a quadrature encoder as the transducer,
+            an ESP32 as the controller, and a TB6612FNG driver as the motor-power
+            interface. The completed system will compare encoder feedback with a target
+            speed and adjust the motor command through closed-loop software.
+          </p>
+
+          <p>
+            The Fusion 360 simulation documents the current mechanical behavior and
+            verifies the gear relationships before the motor bracket and shaft adapter
+            are manufactured. Electrical operation and closed-loop control will be
+            documented separately after the physical electronics are assembled.
+          </p>
+
+          <video
+            class="project-video"
+            controls
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Fusion 360 motion simulation supporting the electronic four-gear system"
+          >
+            <source src="assets/video/gears.mp4" type="video/mp4" />
+            <p>
+              Your browser cannot display the video.
+              <a href="assets/video/gears.mp4">Open the gear simulation video</a>.
+            </p>
+          </video>
+
+          <iframe
+            class="pdf-viewer"
+            src="assets/docs/gears.pdf"
+            title="Original Four-Gear Mechanism project documentation"
+            loading="lazy"
+          >
+            <p>
+              Your browser cannot display the PDF.
+              <a href="assets/docs/gears.pdf">Open the original gear project PDF</a>.
+            </p>
+          </iframe>
+
+          <div class="button-row">
+            <a
+              class="btn"
+              href="assets/docs/gears.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Original Project PDF
+            </a>
+
+            <a class="btn btn-secondary" href="#four-gears-evidence">
+              View DFM Project Evidence
+            </a>
+          </div>
         </div>
       </section>
 
@@ -699,6 +890,23 @@
         <h2>Objective 6</h2>
         <p><strong>Implement and evaluate algorithms and methods enabling autonomy in a mobile robot.</strong></p>
         <p class="small">Related courses: RBT173, RBT347</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 6 review.</strong></p>
+        </div>
+      </section>
+    </div>
+  </details>
+</main>
+
+<footer>
+  © <span id="y"></span> Timothy R. Williams
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
         <div class="evidence-placeholder">
           <p><strong>Project evidence will be added during the Objective 6 review.</strong></p>
         </div>
