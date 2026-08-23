@@ -30,8 +30,7 @@
     }
 
     .project-meta,
-    .program-tags,
-    .evidence-actions {
+    .program-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -50,28 +49,39 @@
       font-weight: 700;
     }
 
+    .project-image-grid {
+      align-items: stretch;
+      margin: 1.5rem 0;
+    }
+
+    .project-image-grid figure,
+    .project-image-grid > .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin: 0;
+    }
+
     .project-image-grid img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      object-position: center;
+      background: var(--image-area-bg, #ffffff);
+      border-radius: 0.4rem;
     }
 
-    .evidence-section {
+    .project-image-grid .image-caption {
+      margin: 0.75rem 0 0;
+    }
+
+    .project-content {
       margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid currentColor;
     }
 
-    .evidence-list {
-      display: grid;
-      gap: 0.75rem;
-      padding-left: 1.25rem;
-    }
-
-    .pdf-viewer {
-      width: 100%;
-      min-height: 650px;
-      border: 1px solid currentColor;
-      border-radius: 0.5rem;
+    .project-actions {
+      margin-top: 1.5rem;
+      padding-top: 0;
     }
 
     .pending-evidence {
@@ -92,9 +102,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .pdf-viewer {
-        min-height: 475px;
-      }
     }
 
     @media (max-width: 520px) {
@@ -294,44 +301,21 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>Fusion 360 model and dimensional geometry</li>
-          <li>Structural-simulation results</li>
-          <li>Prototype and installation images</li>
-          <li>Patent proposal documenting function, variations, and applications</li>
-        </ul>
-
-        <iframe
-          class="pdf-viewer"
-          src="assets/docs/4p.pdf"
-          title="Perpetual Planter patent proposal"
-          loading="lazy"
+      <div class="project-actions button-row">
+        <a
+          class="btn"
+          href="assets/docs/4p.pdf"
+          target="_blank"
+          rel="noopener"
         >
-          <p>
-            Your browser cannot display the PDF.
-            <a href="assets/docs/4p.pdf">Open the patent proposal</a>.
-          </p>
-        </iframe>
-
-        <div class="evidence-actions button-row">
-          <a
-            class="btn"
-            href="assets/docs/4p.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            Open Patent Proposal
-          </a>
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-1">
-            DMF Objective 1
-          </a>
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-6">
-            DMF Objective 6
-          </a>
-        </div>
+          Patent Proposal
+        </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-1">
+          DMF Objective 1
+        </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-6">
+          DMF Objective 6
+        </a>
       </div>
     </section>
 
@@ -425,24 +409,13 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>CAD model and tray geometry</li>
-          <li>Early and revised printed prototypes</li>
-          <li>Failed connection and labeling examples</li>
-          <li>Completed physical fit test with screws</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
-            DMF Objective 2
-          </a>
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-4">
-            DMF Objective 4
-          </a>
-        </div>
+      <div class="project-actions button-row">
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
+          DMF Objective 2
+        </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-4">
+          DMF Objective 4
+        </a>
       </div>
     </section>
 
@@ -530,24 +503,13 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>Assembled CAD model</li>
-          <li>Dimensioned assembly drawing</li>
-          <li>Launcher-body technical drawing</li>
-          <li>Structural simulation and failure analysis</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-3">
-            DMF Objective 3
-          </a>
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-4">
-            DMF Objective 4
-          </a>
-        </div>
+      <div class="project-actions button-row">
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-3">
+          DMF Objective 3
+        </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-4">
+          DMF Objective 4
+        </a>
       </div>
     </section>
 
@@ -636,24 +598,13 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>Original concept sketches</li>
-          <li>Fusion 360 enclosure model</li>
-          <li>Printed prototype components</li>
-          <li>Final assembly and operating test pending</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-3">
-            DMF Objective 3
-          </a>
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
-            DMF Objective 5
-          </a>
-        </div>
+      <div class="project-actions button-row">
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-3">
+          DMF Objective 3
+        </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
+          DMF Objective 5
+        </a>
       </div>
     </section>
 
@@ -744,56 +695,32 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>Gear CAD models and mounting-plate layout</li>
-          <li>Gear calculations and original project documentation</li>
-          <li>Fusion 360 motion simulation</li>
-          <li>Physical mechanism demonstration</li>
-          <li>Electronic-control evidence to be added as completed</li>
-        </ul>
-
-        <iframe
-          class="pdf-viewer"
-          src="assets/docs/gears.pdf"
-          title="Original Four-Gear Mechanism project documentation"
-          loading="lazy"
+      <div class="project-actions button-row">
+        <a
+          class="btn"
+          href="assets/docs/gears.pdf"
+          target="_blank"
+          rel="noopener"
         >
-          <p>
-            Your browser cannot display the PDF.
-            <a href="assets/docs/gears.pdf">Open the gear project PDF</a>.
-          </p>
-        </iframe>
+          Project PDF
+        </a>
 
-        <div class="evidence-actions button-row">
-          <a
-            class="btn"
-            href="assets/docs/gears.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            Open Project PDF
-          </a>
+        <a
+          class="btn"
+          href="assets/video/gears.mp4"
+          target="_blank"
+          rel="noopener"
+        >
+          Motion Simulation Video
+        </a>
 
-          <a
-            class="btn"
-            href="assets/video/gears.mp4"
-            target="_blank"
-            rel="noopener"
-          >
-            View Motion Simulation Video
-          </a>
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
+          DMF Objective 2
+        </a>
 
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
-            DMF Objective 2
-          </a>
-
-          <a class="btn btn-secondary" href="boards.html#rbt-objective-4">
-            RBT Objective 4
-          </a>
-        </div>
+        <a class="btn btn-secondary" href="boards.html#rbt-objective-4">
+          RBT Objective 4
+        </a>
       </div>
     </section>
 
@@ -879,21 +806,10 @@
         </ul>
       </div>
 
-      <div class="evidence-section">
-        <h3>Project Evidence</h3>
-
-        <ul class="evidence-list">
-          <li>Working ESP32, sensor, and OLED circuit</li>
-          <li>Embedded code and successful temperature output</li>
-          <li>OLED faceplate measurements and CAD development</li>
-          <li>Final enclosure images and demonstration pending</li>
-        </ul>
-
-        <div class="button-row">
-          <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
-            DMF Objective 5
-          </a>
-        </div>
+      <div class="project-actions button-row">
+        <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
+          DMF Objective 5
+        </a>
       </div>
     </section>
 
