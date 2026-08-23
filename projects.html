@@ -5,15 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Timothy R. Williams</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > summary { cursor: pointer; list-style: none; }
+    .nav-dropdown > summary::-webkit-details-marker { display: none; }
+    .nav-dropdown > summary::after { content: " ▾"; font-size: 0.8em; }
+    .nav-dropdown[open] > summary::after { content: " ▴"; }
+    .nav-dropdown-menu { display: grid; gap: 0.35rem; min-width: 13rem; padding: 0.75rem; }
+    .projects-intro { max-width: 850px; }
+    .project-jump-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .project-jump-list a { text-align: center; }
+    .program-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+    @media (min-width: 801px) {
+      header nav { display: flex; align-items: center; }
+      .nav-dropdown-menu { position: absolute; z-index: 10; top: calc(100% + 0.35rem); left: 0; }
+    }
+    @media (max-width: 800px) {
+      .nav-dropdown-menu { padding-left: 1rem; }
+      .project-jump-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 
 <body>
 <header>
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
+
+    <details class="nav-dropdown">
+      <summary>DFM</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#dfm-objective-1">Objective 1</a>
+        <a href="boards.html#dfm-objective-2">Objective 2</a>
+        <a href="boards.html#dfm-objective-3">Objective 3</a>
+        <a href="boards.html#dfm-objective-4">Objective 4</a>
+        <a href="boards.html#dfm-objective-5">Objective 5</a>
+        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <details class="nav-dropdown">
+      <summary>RBT</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#rbt-objective-1">Objective 1</a>
+        <a href="boards.html#rbt-objective-2">Objective 2</a>
+        <a href="boards.html#rbt-objective-3">Objective 3</a>
+        <a href="boards.html#rbt-objective-4">Objective 4</a>
+        <a href="boards.html#rbt-objective-5">Objective 5</a>
+        <a href="boards.html#rbt-objective-6">Objective 6</a>
+      </div>
+    </details>
+
     <a href="sip.html">SIP</a>
-    <a href="boards.html">Boards</a>
-    <a href="projects.html" class="active">Projects | Objectives</a>
+    <a href="projects.html" class="active" aria-current="page">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -21,22 +71,31 @@
 <main>
   <h1>Projects</h1>
 
-  <p class="small">
-    Selected design, fabrication, mechanical, and embedded-systems projects completed
-    throughout my time at the University of Advancing Technology, demonstrating the objectives of both the Digital Maker and
-    Fabrication and Robotics and Embedded Systems programs.
+  <p class="small projects-intro">
+    Selected design, fabrication, mechanical, robotics, programming, and embedded-systems
+    work supporting the objectives of both the Digital Maker and Fabrication and Robotics
+    and Embedded Systems programs.
   </p>
 
   <div class="card">
     <h2>Project Portfolio Overview</h2>
 
     <p>
-      The projects on this page provide supporting evidence for the six Digital Maker
-      and Fabrication program objectives. Each project documents the process of moving
-      from an initial idea or assigned problem through design, prototyping, testing,
-      revision, and final evaluation.
+      These projects provide reusable evidence across both degree programs. Each entry
+      documents the progression from a problem or design requirement through modeling,
+      fabrication, programming, testing, revision, and evaluation. The objective links
+      identify where each project is currently used on the Boards page.
     </p>
 
+    <nav class="project-jump-list" aria-label="Project index">
+      <a class="btn" href="#perpetual-planter">Perpetual Planter</a>
+      <a class="btn" href="#screw-stack">Screw Stack</a>
+      <a class="btn" href="#dbm-plane">Launch Glider</a>
+      <a class="btn" href="#dozer-mouse">Dozer Mouse</a>
+      <a class="btn" href="#four-gears">Four-Gear Mechanism</a>
+      <a class="btn" href="#gaia-monitor">Gaia Monitor</a>
+      <a class="btn" href="sip.html">Project C2</a>
+    </nav>
   </div>
 
   <!-- PERPETUAL PLANTER -->
@@ -46,7 +105,7 @@
     <p><strong>Course:</strong> DBM215</p>
 
     <p>
-      <strong>Boards Objectives:</strong> Objective 1 and Objective 6
+      <strong>DFM Objectives:</strong> Objective 1 and Objective 6
     </p>
 
     <div class="grid project-image-grid">
@@ -193,11 +252,11 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-1">
+        <a class="btn" href="boards.html#dfm-objective-1">
           View Under Objective 1
         </a>
 
-        <a class="btn" href="boards.html#objective-6">
+        <a class="btn" href="boards.html#dfm-objective-6">
           View Under Objective 6
         </a>
       </div>
@@ -211,7 +270,7 @@
     <p><strong>Course:</strong> DBM150</p>
 
     <p>
-      <strong>Boards Objectives:</strong> Objective 2 and Objective 4
+      <strong>DFM Objectives:</strong> Objective 2 and Objective 4
     </p>
 
     <div class="grid project-image-grid">
@@ -310,11 +369,11 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-2">
+        <a class="btn" href="boards.html#dfm-objective-2">
           View Under Objective 2
         </a>
 
-        <a class="btn" href="boards.html#objective-4">
+        <a class="btn" href="boards.html#dfm-objective-4">
           View Under Objective 4
         </a>
       </div>
@@ -328,7 +387,7 @@
     <p><strong>Course:</strong> DBM100</p>
 
     <p>
-      <strong>Boards Objectives:</strong> Objective 3 and Objective 4
+      <strong>DFM Objectives:</strong> Objective 3 and Objective 4
     </p>
 
     <div class="grid project-image-grid">
@@ -417,11 +476,11 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-3">
+        <a class="btn" href="boards.html#dfm-objective-3">
           View Under Objective 3
         </a>
 
-        <a class="btn" href="boards.html#objective-4">
+        <a class="btn" href="boards.html#dfm-objective-4">
           View Under Objective 4
         </a>
       </div>
@@ -435,7 +494,7 @@
     <p><strong>Course:</strong> TCH270</p>
 
     <p>
-      <strong>Boards Objectives:</strong> Objective 3 and Objective 5
+      <strong>DFM Objectives:</strong> Objective 3 and Objective 5
     </p>
 
     <div class="grid project-image-grid">
@@ -530,11 +589,11 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-3">
+        <a class="btn" href="boards.html#dfm-objective-3">
           View Under Objective 3
         </a>
 
-        <a class="btn" href="boards.html#objective-5">
+        <a class="btn" href="boards.html#dfm-objective-5">
           View Under Objective 5
         </a>
       </div>
@@ -550,7 +609,7 @@
     </p>
 
     <p>
-      <strong>Boards Objective:</strong> Objective 2
+      <strong>DFM Objective:</strong> Objective 2
     </p>
 
     <div class="grid project-image-grid">
@@ -628,7 +687,7 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-2">
+        <a class="btn" href="boards.html#dfm-objective-2">
           View Under Objective 2
         </a>
       </div>
@@ -644,7 +703,7 @@
     </p>
 
     <p>
-      <strong>Boards Objective:</strong> Objective 5
+      <strong>DFM Objective:</strong> Objective 5
     </p>
 
     <div class="grid project-image-grid">
@@ -663,31 +722,33 @@
         <h3>Breadboard Test</h3>
 
         <p>
-          A photograph of the working breadboard circuit will be added after testing.
+          A photograph of the working ESP32, DS18B20 sensor, and OLED circuit will be
+          added with the next evidence update.
         </p>
 
-        <p><strong>Status:</strong> Build pending.</p>
+        <p><strong>Status:</strong> Circuit and display operational.</p>
       </div>
 
       <div class="card">
         <h3>Fusion 360 Housing</h3>
 
         <p>
-          The custom monitor housing will be added after it is designed.
+          The custom monitor housing and OLED faceplate will be added after the final
+          fit and mounting details are completed.
         </p>
 
-        <p><strong>Status:</strong> Design pending.</p>
+        <p><strong>Status:</strong> Faceplate development in progress.</p>
       </div>
 
       <div class="card">
         <h3>Working Monitor</h3>
 
         <p>
-          A photograph of the completed monitor displaying temperature will be added
-          after final assembly.
+          A photograph of the monitor displaying the live temperature reading will be
+          added during the next evidence update.
         </p>
 
-        <p><strong>Status:</strong> Final build pending.</p>
+        <p><strong>Status:</strong> Sensor input and OLED output working.</p>
       </div>
     </div>
 
@@ -720,9 +781,9 @@
       <h3>Current Status</h3>
 
       <p>
-        <strong>Build pending.</strong> The required components are available. The next
-        steps are breadboard testing, code development, OLED output testing, housing
-        design, final assembly, and a short functional demonstration.
+        <strong>Working prototype completed.</strong> The ESP32 reads the DS18B20 sensor
+        and displays the temperature on the OLED. The current development work focuses
+        on the custom faceplate and final physical enclosure.
       </p>
 
       <h3>Components</h3>
@@ -748,8 +809,12 @@
       </ul>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-5">
-          View Under Objective 5
+        <a class="btn" href="boards.html#dfm-objective-5">
+          View Under DFM Objective 5
+        </a>
+
+        <a class="btn" href="boards.html#rbt-objective-1">
+          View Under RBT Objective 1
         </a>
       </div>
     </div>
@@ -770,11 +835,11 @@
       </p>
 
       <div class="button-row">
-        <a class="btn" href="boards.html#objective-1">
+        <a class="btn" href="boards.html#dfm-objective-1">
           View Under Objective 1
         </a>
 
-        <a class="btn" href="boards.html#objective-6">
+        <a class="btn" href="boards.html#dfm-objective-6">
           View Under Objective 6
         </a>
 
