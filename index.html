@@ -3,17 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Timothy R. Williams | SIP & Boards Portfolio</title>
+  <title>Timothy R. Williams | Design, Robotics & Embedded Systems Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > summary { cursor: pointer; list-style: none; }
+    .nav-dropdown > summary::-webkit-details-marker { display: none; }
+    .nav-dropdown > summary::after { content: " ▾"; font-size: 0.8em; }
+    .nav-dropdown[open] > summary::after { content: " ▴"; }
+    .nav-dropdown-menu {
+      display: grid;
+      gap: 0.35rem;
+      min-width: 13rem;
+      padding: 0.75rem;
+    }
+    .home-intro { max-width: 800px; margin-bottom: 2rem; }
+    .degree-card { display: flex; flex-direction: column; }
+    .degree-card .button-row { margin-top: auto; }
+    @media (min-width: 801px) {
+      header nav { display: flex; align-items: center; }
+      .nav-dropdown-menu {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 0.35rem);
+        left: 0;
+      }
+    }
+    @media (max-width: 800px) {
+      .nav-dropdown-menu { padding-left: 1rem; }
+    }
+  </style>
 </head>
 
 <body>
 <header>
-  <nav>
-    <a href="index.html" class="active">Home</a>
+  <nav aria-label="Primary navigation">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+
+    <details class="nav-dropdown">
+      <summary>DFM</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#dfm-objective-1">Objective 1</a>
+        <a href="boards.html#dfm-objective-2">Objective 2</a>
+        <a href="boards.html#dfm-objective-3">Objective 3</a>
+        <a href="boards.html#dfm-objective-4">Objective 4</a>
+        <a href="boards.html#dfm-objective-5">Objective 5</a>
+        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <details class="nav-dropdown">
+      <summary>RBT</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#rbt-objective-1">Objective 1</a>
+        <a href="boards.html#rbt-objective-2">Objective 2</a>
+        <a href="boards.html#rbt-objective-3">Objective 3</a>
+        <a href="boards.html#rbt-objective-4">Objective 4</a>
+        <a href="boards.html#rbt-objective-5">Objective 5</a>
+        <a href="boards.html#rbt-objective-6">Objective 6</a>
+      </div>
+    </details>
+
     <a href="sip.html">SIP</a>
-    <a href="boards.html">Boards</a>
-    <a href="projects.html">Projects | Objectives</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -21,92 +74,92 @@
 <main>
   <h1>Timothy R. Williams</h1>
 
-  <p class="small">
-    Digital Maker & Fabrication • Prototype Development • SIP & Boards Portfolio
+  <p class="small home-intro">
+    Digital Maker and Fabrication • Robotics and Embedded Systems • Prototype Development
   </p>
 
-  <div class="card">
+  <section class="card">
     <h2>About Me</h2>
 
     <p>
-      I am a Digital Maker and Fabrication student focused on turning ideas into
-      working prototypes through iterative design, fabrication, testing, and revision.
-      My work includes CAD development in Fusion 360, additive manufacturing with a
-      Bambu P1P, mechanical systems, embedded electronics, and functional product
-      development.
+      I am a dual-major student in Digital Maker and Fabrication and Robotics and
+      Embedded Systems at the University of Advancing Technology. My work combines
+      mechanical design, physical fabrication, electronics, programming, and testing
+      to develop functional systems and prototypes.
     </p>
 
     <p>
-      I approach projects as a process of identifying a problem, developing a practical
-      solution, manufacturing a testable prototype, and using real results to improve
-      the design. This process allows me to move beyond concept models and create
-      products that can be evaluated for function, usability, manufacturability, and
-      future development.
+      I approach each project by identifying a practical problem, defining the minimum
+      function the product must perform, creating a testable design, and using the
+      results to guide the next revision. This process allows me to evaluate not only
+      whether a concept works, but also how it can be manufactured, assembled, used,
+      maintained, and expanded.
     </p>
 
     <p>
-      My Student Innovation Project, Project C2: Capillary Canopy, explores passive
-      environmental control through 3D-printed terrarium lid geometry. My broader
-      portfolio also includes mechanical assemblies, storage systems, ergonomic
-      products, embedded electronics, and other prototypes completed throughout the
-      Digital Maker and Fabrication program.
+      My portfolio includes Project C2: Capillary Canopy, Project Gaia, mechanical
+      assemblies, additive-manufacturing projects, embedded monitoring systems,
+      environmental sensors, custom enclosures, and product-development work completed
+      throughout both degree programs.
     </p>
 
-    <p>
+    <p aria-label="Primary technical skills">
       <span class="tag">Fusion 360</span>
       <span class="tag">3D Printing</span>
-      <span class="tag">Prototyping</span>
-      <span class="tag">Testing</span>
+      <span class="tag">Mechanical Design</span>
+      <span class="tag">ESP32</span>
+      <span class="tag">Sensors</span>
       <span class="tag">Embedded Systems</span>
+      <span class="tag">Programming</span>
       <span class="tag">Product Development</span>
     </p>
-  </div>
+  </section>
 
   <div class="grid home-grid">
-    <div class="card">
-      <h3>SIP Project: C2</h3>
-
+    <section class="card degree-card">
+      <h3>Digital Maker and Fabrication</h3>
       <p>
-        Full documentation for Project C2: Capillary Canopy, including prototype
-        development, testing, revisions, technical drawings, and final SIP materials.
+        Six objectives covering prototype development, fabrication techniques,
+        human-centered design, material evaluation, electronics integration, and
+        Agile/MVP development.
       </p>
-
       <div class="button-row">
-        <a class="btn" href="sip.html">
-          Open SIP
-        </a>
+        <a class="btn" href="boards.html#dfm-boards">View DFM Objectives</a>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h3>Boards Objectives</h3>
-
+    <section class="card degree-card">
+      <h3>Robotics and Embedded Systems</h3>
       <p>
-        The six Digital Maker and Fabrication program objectives supported by projects
-        completed throughout my time at UAT.
+        Six objectives covering robotic solutions, digital logic, embedded-system
+        design, transducers and actuators, real-time systems, and mobile autonomy.
       </p>
-
       <div class="button-row">
-        <a class="btn" href="boards.html">
-          Open Boards
-        </a>
+        <a class="btn" href="boards.html#rbt-boards">View RBT Objectives</a>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h3>Projects | Objectives</h3>
-
+    <section class="card degree-card">
+      <h3>Student Innovation Project</h3>
       <p>
-        Supporting CAD, fabrication, mechanical, electronics, and prototype work used
-        throughout my Boards portfolio.
+        Development and testing records for Project C2: Capillary Canopy, including
+        prototype revisions, technical drawings, results, and final SIP materials.
       </p>
-
       <div class="button-row">
-        <a class="btn" href="projects.html">
-          Open Projects
-        </a>
+        <a class="btn" href="sip.html">View SIP</a>
       </div>
-    </div>
+    </section>
+
+    <section class="card degree-card">
+      <h3>Project Evidence</h3>
+      <p>
+        CAD, fabrication, electronics, programming, testing, and documentation used
+        as evidence across both degree programs.
+      </p>
+      <div class="button-row">
+        <a class="btn" href="projects.html">View Projects</a>
+      </div>
+    </section>
   </div>
 </main>
 
