@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boards Objectives | Timothy R. Williams</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .boards-intro { max-width: 760px; margin-bottom: 2rem; }
+    .degree-dropdown { margin: 1.5rem 0; }
+    .degree-dropdown > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 1.25rem;
+      border: 1px solid currentColor;
+      border-radius: .75rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 700;
+      list-style: none;
+    }
+    .degree-dropdown > summary::-webkit-details-marker { display: none; }
+    .degree-dropdown > summary::after { content: "+"; font-size: 1.5rem; line-height: 1; }
+    .degree-dropdown[open] > summary::after { content: "−"; }
+    .degree-dropdown > summary small { margin-left: auto; font-size: .85rem; font-weight: 400; opacity: .75; }
+    .degree-content { padding-top: 1rem; }
+    .objective-jump-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 1rem 0 1.5rem; }
+    .objective-jump-list a { text-align: center; }
+    .evidence-placeholder { border-left: 4px solid currentColor; padding: .25rem 0 .25rem 1rem; opacity: .8; }
+    @media (max-width: 700px) {
+      .objective-jump-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .degree-dropdown > summary { align-items: flex-start; flex-wrap: wrap; }
+    }
+  </style>
 </head>
 
 <body>
@@ -19,14 +49,27 @@
 </header>
 
 <main>
-  <h1>Digital Maker and Fabrication Boards</h1>
-
-  <p class="small">
-    Objectives supported by selected projects completed throughout my time at UAT.
+  <h1>Boards Objectives</h1>
+  <p class="small boards-intro">
+    Select a degree program to review its six objectives and supporting project evidence.
   </p>
 
+  <details class="degree-dropdown" id="dfm-boards" open>
+    <summary>
+      <span>Digital Maker and Fabrication (DFM)</span>
+      <small>6 objectives</small>
+    </summary>
+    <div class="degree-content">
+      <nav class="objective-jump-list" aria-label="Digital Maker and Fabrication objectives">
+          <a class="btn" href="#dfm-objective-1">Objective 1</a>
+          <a class="btn" href="#dfm-objective-2">Objective 2</a>
+          <a class="btn" href="#dfm-objective-3">Objective 3</a>
+          <a class="btn" href="#dfm-objective-4">Objective 4</a>
+          <a class="btn" href="#dfm-objective-5">Objective 5</a>
+          <a class="btn" href="#dfm-objective-6">Objective 6</a>
+      </nav>
   <div class="card">
-    <h2>Boards Evaluation Process</h2>
+    <h2>Digital Maker and Fabrication Evaluation</h2>
 
     <p>
       The purpose of the Boards evaluation is to demonstrate to Subject Matter Experts
@@ -69,7 +112,7 @@
   </div>
 
   <!-- OBJECTIVE 1 -->
-  <section class="card" id="objective-1">
+  <section class="card" id="dfm-objective-1">
     <h2>Objective 1</h2>
 
     <p>
@@ -155,7 +198,7 @@
   </section>
 
   <!-- OBJECTIVE 2 -->
-  <section class="card" id="objective-2">
+  <section class="card" id="dfm-objective-2">
     <h2>Objective 2</h2>
 
     <p>
@@ -238,7 +281,7 @@
   </section>
 
   <!-- OBJECTIVE 3 -->
-  <section class="card" id="objective-3">
+  <section class="card" id="dfm-objective-3">
     <h2>Objective 3</h2>
 
     <p>
@@ -322,7 +365,7 @@
   </section>
 
   <!-- OBJECTIVE 4 -->
-  <section class="card" id="objective-4">
+  <section class="card" id="dfm-objective-4">
     <h2>Objective 4</h2>
 
     <p>
@@ -405,7 +448,7 @@
   </section>
 
   <!-- OBJECTIVE 5 -->
-  <section class="card" id="objective-5">
+  <section class="card" id="dfm-objective-5">
     <h2>Objective 5</h2>
 
     <p>
@@ -492,7 +535,7 @@
   </section>
 
   <!-- OBJECTIVE 6 -->
-  <section class="card" id="objective-6">
+  <section class="card" id="dfm-objective-6">
     <h2>Objective 6</h2>
 
     <p>
@@ -588,6 +631,80 @@
       <a class="btn" href="sip.html">View Project C2</a>
     </div>
   </div>
+
+    </div>
+  </details>
+
+  <details class="degree-dropdown" id="rbt-boards">
+    <summary>
+      <span>Robotics and Embedded Systems (RBT)</span>
+      <small>6 objectives</small>
+    </summary>
+    <div class="degree-content">
+      <nav class="objective-jump-list" aria-label="Robotics and Embedded Systems objectives">
+          <a class="btn" href="#rbt-objective-1">Objective 1</a>
+          <a class="btn" href="#rbt-objective-2">Objective 2</a>
+          <a class="btn" href="#rbt-objective-3">Objective 3</a>
+          <a class="btn" href="#rbt-objective-4">Objective 4</a>
+          <a class="btn" href="#rbt-objective-5">Objective 5</a>
+          <a class="btn" href="#rbt-objective-6">Objective 6</a>
+      </nav>
+
+      <section class="card" id="rbt-objective-1">
+        <h2>Objective 1</h2>
+        <p><strong>Design and complete robotic and embedded systems solutions that apply to real-world situations and challenges.</strong></p>
+        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 1 review.</strong></p>
+        </div>
+      </section>
+
+      <section class="card" id="rbt-objective-2">
+        <h2>Objective 2</h2>
+        <p><strong>Implement a simple microprocessor using digital logic design.</strong></p>
+        <p class="small">Related courses: RBT131, RBT173</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 2 review.</strong></p>
+        </div>
+      </section>
+
+      <section class="card" id="rbt-objective-3">
+        <h2>Objective 3</h2>
+        <p><strong>Demonstrate embedded system design skills, including microcontroller selection, schematic design, printed circuit board layout, design for electromagnetic compatibility, and design for manufacturing.</strong></p>
+        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 3 review.</strong></p>
+        </div>
+      </section>
+
+      <section class="card" id="rbt-objective-4">
+        <h2>Objective 4</h2>
+        <p><strong>Apply knowledge of transducers, actuators, and simultaneous hardware and software development in the design of an embedded system.</strong></p>
+        <p class="small">Related courses: RBT173, RBT211, RBT347</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 4 review.</strong></p>
+        </div>
+      </section>
+
+      <section class="card" id="rbt-objective-5">
+        <h2>Objective 5</h2>
+        <p><strong>Design and analyze real-time embedded systems, including advanced digital logic design, signal processing, and high-speed digital systems.</strong></p>
+        <p class="small">Related courses: RBT131, RBT211</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 5 review.</strong></p>
+        </div>
+      </section>
+
+      <section class="card" id="rbt-objective-6">
+        <h2>Objective 6</h2>
+        <p><strong>Implement and evaluate algorithms and methods enabling autonomy in a mobile robot.</strong></p>
+        <p class="small">Related courses: RBT173, RBT347</p>
+        <div class="evidence-placeholder">
+          <p><strong>Project evidence will be added during the Objective 6 review.</strong></p>
+        </div>
+      </section>
+    </div>
+  </details>
 </main>
 
 <footer>
