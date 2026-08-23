@@ -97,6 +97,17 @@
       visibility: hidden;
     }
 
+    .evidence-button-row {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    .objective-button-row {
+      justify-content: center;
+      margin-top: 0;
+    }
+
     @media (max-width: 800px) {
       .project-jump-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -225,7 +236,7 @@
             loading="lazy"
           />
           <figcaption class="image-caption">
-            Dimensioned documentation of the insert geometry.
+           Schematic of the insert geometry.
           </figcaption>
         </figure>
 
@@ -301,21 +312,33 @@
         </ul>
       </div>
 
-      <div class="project-actions button-row">
-        <a
-          class="btn"
-          href="assets/docs/4p.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Patent Proposal
-        </a>
-        <a class="btn btn-secondary" href="boards.html#dmf-objective-1">
-          DMF Objective 1
-        </a>
-        <a class="btn btn-secondary" href="boards.html#dmf-objective-6">
-          DMF Objective 6
-        </a>
+      <div class="project-actions">
+        <div class="evidence-button-row">
+          <a
+            class="btn"
+            href="assets/docs/4p.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Patent Proposal
+          </a>
+        </div>
+      
+        <div class="button-row objective-button-row">
+          <a
+            class="btn btn-secondary"
+            href="boards.html#dmf-objective-1"
+          >
+            DMF Objective 1
+          </a>
+      
+          <a
+            class="btn btn-secondary"
+            href="boards.html#dmf-objective-6"
+          >
+            DMF Objective 6
+          </a>
+        </div>
       </div>
     </section>
 
