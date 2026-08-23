@@ -5,83 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Timothy R. Williams</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .nav-dropdown > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav-dropdown > summary::after {
+      content: " ▾";
+      font-size: 0.8em;
+    }
+
+    .nav-dropdown[open] > summary::after {
+      content: " ▴";
+    }
+
+    .nav-dropdown-menu {
+      display: grid;
+      gap: 0.35rem;
+      min-width: 13rem;
+      padding: 0.75rem;
+    }
+
+    .contact-intro {
+      max-width: 720px;
+      margin-bottom: 2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .contact-method {
+      margin-top: 1.5rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 801px) {
+      header nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-dropdown-menu {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 0.35rem);
+        left: 0;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-dropdown-menu {
+        padding-left: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 <header>
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
+
+    <details class="nav-dropdown">
+      <summary>DFM</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#dfm-objective-1">Objective 1</a>
+        <a href="boards.html#dfm-objective-2">Objective 2</a>
+        <a href="boards.html#dfm-objective-3">Objective 3</a>
+        <a href="boards.html#dfm-objective-4">Objective 4</a>
+        <a href="boards.html#dfm-objective-5">Objective 5</a>
+        <a href="boards.html#dfm-objective-6">Objective 6</a>
+      </div>
+    </details>
+
+    <details class="nav-dropdown">
+      <summary>RBT</summary>
+      <div class="nav-dropdown-menu card">
+        <a href="boards.html#rbt-objective-1">Objective 1</a>
+        <a href="boards.html#rbt-objective-2">Objective 2</a>
+        <a href="boards.html#rbt-objective-3">Objective 3</a>
+        <a href="boards.html#rbt-objective-4">Objective 4</a>
+        <a href="boards.html#rbt-objective-5">Objective 5</a>
+        <a href="boards.html#rbt-objective-6">Objective 6</a>
+      </div>
+    </details>
+
     <a href="sip.html">SIP</a>
-    <a href="boards.html">Boards</a>
-    <a href="projects.html">Projects | Objectives</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active" aria-current="page">Contact</a>
   </nav>
 </header>
 
 <main>
   <h1>Contact</h1>
 
-  <p class="small">
-    Questions, feedback, or project inquiries can be sent using the form below.
+  <p class="small contact-intro">
+    Contact me about my design, fabrication, robotics, embedded-systems, or
+    other technical work.
   </p>
 
-  <div class="card">
-    <h2>Contact Information</h2>
+  <div class="contact-grid">
+    <section class="card">
+      <h2>Contact Information</h2>
 
-    <p>
-      Use the button below to contact me directly by email.
-    </p>
+      <p>
+        The inquiry form is the best way to send a question or provide feedback.
+        You can also contact me directly by email.
+      </p>
 
-    <div class="button-row">
-      <a
-        class="btn"
-        href="mailto:timothy.r.williams168@gmail.com"
-      >
-        Email Timothy R. Williams
-      </a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Inquiry Form</h2>
-
-    <p class="small">
-      Submit feedback, questions, or project inquiries here.
-    </p>
-
-    <form action="https://formspree.io/f/mjgayaya" method="POST">
-      <label for="name">Your name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        autocomplete="name"
-        required
-      />
-
-      <label for="email">Your email</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        autocomplete="email"
-        required
-      />
-
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="6"
-        required
-      ></textarea>
-
-      <div class="button-row">
-        <button type="submit" class="btn">
-          Send Message
-        </button>
+      <div class="contact-method">
+        <h3>Email</h3>
+        <div class="button-row">
+          <a
+            class="btn"
+            href="mailto:timothy.r.williams168@gmail.com"
+          >
+            Email Timothy R. Williams
+          </a>
+        </div>
       </div>
-    </form>
+    </section>
+
+    <section class="card">
+      <h2>Send an Inquiry</h2>
+
+      <p class="small">
+        Complete each field below and I will respond by email.
+      </p>
+
+      <form action="https://formspree.io/f/mjgayaya" method="POST">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+        />
+
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          required
+        ></textarea>
+
+        <div class="button-row">
+          <button type="submit" class="btn">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </section>
   </div>
 </main>
 
