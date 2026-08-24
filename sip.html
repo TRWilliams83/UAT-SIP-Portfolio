@@ -8,11 +8,34 @@
 
   <style>
     .nav-dropdown { position: relative; }
-    .nav-dropdown > summary { cursor: pointer; list-style: none; }
+    .nav-dropdown > summary {
+      display: block;
+      padding: 0.85rem 1rem;
+      color: #ffffff;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+    .nav-dropdown > summary:hover,
+    .nav-dropdown > summary:focus-visible,
+    .nav-dropdown[open] > summary {
+      background: var(--nav-hover, #344254);
+    }
     .nav-dropdown > summary::-webkit-details-marker { display: none; }
     .nav-dropdown > summary::after { content: " ▾"; font-size: 0.8em; }
     .nav-dropdown[open] > summary::after { content: " ▴"; }
-    .nav-dropdown-menu { display: grid; gap: 0.35rem; min-width: 13rem; padding: 0.75rem; }
+    .nav-dropdown-menu {
+      display: grid;
+      gap: 0.35rem;
+      min-width: 13rem;
+      margin: 0;
+      padding: 0.75rem;
+      background: var(--card-bg, #ffffff);
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      color: var(--text, #222222);
+    }
     .sip-intro { max-width: 850px; }
     .sip-jump-list {
       display: grid;
@@ -23,7 +46,7 @@
     .sip-jump-list a { text-align: center; }
     @media (min-width: 801px) {
       header nav { display: flex; align-items: center; }
-      .nav-dropdown-menu { position: absolute; z-index: 10; top: calc(100% + 0.35rem); left: 0; }
+      .nav-dropdown-menu { position: absolute; z-index: 100; top: 100%; left: 0; }
     }
     @media (max-width: 800px) {
       .nav-dropdown-menu { padding-left: 1rem; }
@@ -40,12 +63,12 @@
     <details class="nav-dropdown">
       <summary>DMF</summary>
       <div class="nav-dropdown-menu card">
-        <a href="boards.html#dfm-objective-1">Objective 1</a>
-        <a href="boards.html#dfm-objective-2">Objective 2</a>
-        <a href="boards.html#dfm-objective-3">Objective 3</a>
-        <a href="boards.html#dfm-objective-4">Objective 4</a>
-        <a href="boards.html#dfm-objective-5">Objective 5</a>
-        <a href="boards.html#dfm-objective-6">Objective 6</a>
+        <a href="boards.html#dmf-objective-1">Objective 1</a>
+        <a href="boards.html#dmf-objective-2">Objective 2</a>
+        <a href="boards.html#dmf-objective-3">Objective 3</a>
+        <a href="boards.html#dmf-objective-4">Objective 4</a>
+        <a href="boards.html#dmf-objective-5">Objective 5</a>
+        <a href="boards.html#dmf-objective-6">Objective 6</a>
       </div>
     </details>
 
@@ -127,7 +150,7 @@
 
     <div class="button-row">
       <a class="btn" href="boards.html">
-        View DFM Objectives
+        View DMF Objectives
       </a>
     </div>
   </div>
@@ -522,11 +545,11 @@
     </p>
 
     <div class="button-row">
-      <a class="btn" href="boards.html#dfm-objective-1">
+      <a class="btn" href="boards.html#dmf-objective-1">
         View Objective 1
       </a>
 
-      <a class="btn" href="boards.html#dfm-objective-6">
+      <a class="btn" href="boards.html#dmf-objective-6">
         View Objective 6
       </a>
     </div>
