@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   const yearElement = document.getElementById("current-year");
+  const scrollVideos = document.querySelectorAll(".youtube-scroll-video");
 
   // Automatically update the copyright year.
   if (yearElement) {
@@ -53,4 +54,36 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Start embedded YouTube videos when they scroll into view.
+  if ("IntersectionObserver" in window) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+
+          if (entry.isIntersecting) {
+            if (!video.src) {
+              video.src = video.dataset.src;
+            }
+          } else if (video.src) {
+            // Removing the source stops playback when scrolled away.
+            video.removeAttribute("src");
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+    scrollVideos.forEach((video) => {
+      videoObserver.observe(video);
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver support.
+    scrollVideos.forEach((video) => {
+      video.src = video.dataset.src;
+    });
+  }
 });
