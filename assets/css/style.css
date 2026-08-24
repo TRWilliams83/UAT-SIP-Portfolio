@@ -37,6 +37,7 @@ body {
 header {
   position: relative;
   z-index: 20;
+  overflow: visible;
   background: var(--nav-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
@@ -50,6 +51,7 @@ header nav {
   max-width: 980px;
   margin: 0 auto;
   padding: 12px 18px;
+  overflow: visible;
 }
 
 header nav a,
@@ -80,7 +82,7 @@ header nav a.active,
   background: var(--accent);
 }
 
-/* DFM and RBT dropdowns */
+/* DMF and RBT dropdowns */
 
 .nav-dropdown {
   position: relative;
@@ -123,8 +125,14 @@ header nav a.active,
 .nav-dropdown-menu a {
   width: 100%;
   padding: 8px 10px;
+  color: #ffffff;
   font-size: 14px;
   white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus {
+  color: #ffffff;
 }
 
 /* Main page container */
@@ -234,7 +242,7 @@ a:focus {
   justify-content: center;
 }
 
-/* Project image grid */
+/* Project image and video grid */
 
 .project-image-grid {
   align-items: stretch;
@@ -269,6 +277,7 @@ main img {
 /* Standardized project-grid images */
 
 .project-image-grid img {
+  display: block;
   width: 100%;
   height: 240px;
   max-height: none;
@@ -280,11 +289,26 @@ main img {
   object-fit: contain;
 }
 
+/* Standardized project-grid videos */
+
+.project-image-grid video {
+  display: block;
+  width: 100%;
+  height: 240px;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d5dbe1;
+  border-radius: 7px;
+  background: #000000;
+  object-fit: contain;
+}
+
 .grid img {
   width: 100%;
 }
 
-/* Image captions */
+/* Image and video captions */
 
 .image-caption {
   margin: 12px 4px 2px;
@@ -294,7 +318,7 @@ main img {
   text-align: center;
 }
 
-/* Pending-image cards */
+/* Pending-evidence cards */
 
 .project-image-grid > .card > h3:first-child {
   margin-top: auto;
@@ -336,7 +360,7 @@ main img {
   padding-left: 24px;
 }
 
-/* Embedded project video */
+/* Standalone project video */
 
 .project-evidence video,
 video.project-video {
@@ -525,7 +549,8 @@ footer {
     padding: 18px;
   }
 
-  .project-image-grid img {
+  .project-image-grid img,
+  .project-image-grid video {
     height: 280px;
   }
 
@@ -563,7 +588,8 @@ footer {
     max-height: 380px;
   }
 
-  .project-image-grid img {
+  .project-image-grid img,
+  .project-image-grid video {
     height: 230px;
   }
 
