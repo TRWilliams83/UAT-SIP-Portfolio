@@ -656,121 +656,159 @@
     </section>
 
     <section class="card project-record" id="four-gear-mechanism">
-      <span
-        class="anchor-target"
-        id="electronic-four-gear-system"
-        aria-hidden="true"
-      ></span>
-
-      <h2>Four-Gear Mechanism and Electronic Control System</h2>
-
+      <h2>Four-Gear Mechanism</h2>
+    
       <div class="project-meta">
         <p><strong>Course:</strong> RBT205 — Mechanisms and Materials</p>
         <span class="tag">DMF Objective 2</span>
         <span class="tag">RBT Objective 4</span>
       </div>
-
+    
       <div class="grid project-image-grid">
         <figure class="card">
           <img
             src="assets/img/four-gears-1.png"
-            alt="Four-Gear Mechanism gear models"
+            alt="Fusion 360 models of the four gears"
             loading="lazy"
           />
+    
           <figcaption class="image-caption">
-            Fusion 360 view of the four gear sizes.
+            Fusion 360 models of the four gear sizes.
           </figcaption>
         </figure>
-
+    
         <figure class="card">
           <img
             src="assets/img/four-gears-2.png"
             alt="Four-Gear Mechanism mounting plate"
             loading="lazy"
           />
+    
           <figcaption class="image-caption">
             Mounting plate and calculated gear-spacing layout.
           </figcaption>
         </figure>
-
-        <div class="card pending-evidence">
-          <h3>Physical Assembly</h3>
-          <p>
-            Add the completed mechanism photograph here when it is placed in the
-            site's image folder.
-          </p>
-          <p class="project-status">Status: Mechanism demonstrated.</p>
-        </div>
-
-        <div class="card pending-evidence">
-          <h3>Electronic Expansion</h3>
-          <p>
-            Add photographs of the motor, encoder, driver, ESP32, bracket, wiring,
-            and final controlled assembly as development progresses.
-          </p>
-          <p class="project-status">Status: Electronics integration in progress.</p>
-        </div>
+    
+        <figure class="card">
+          <video controls preload="metadata">
+            <source
+              src="assets/video/four-gears-operation.mp4"
+              type="video/mp4"
+            />
+    
+            Your browser does not support HTML video.
+          </video>
+    
+          <figcaption class="image-caption">
+            Manual operation of the completed four-gear mechanism.
+          </figcaption>
+        </figure>
+    
+        <figure class="card">
+          <video controls preload="metadata">
+            <source
+              src="assets/video/four-gears-movement.mp4"
+              type="video/mp4"
+            />
+    
+            Your browser does not support HTML video.
+          </video>
+    
+          <figcaption class="image-caption">
+            Close-up demonstration of the gear engagement and movement.
+          </figcaption>
+        </figure>
       </div>
-
+    
       <div class="project-content">
-        <h3>Mechanical Project</h3>
-
+        <h3>Project Overview</h3>
+    
         <p>
-          The Four-Gear Mechanism contains separate 12-, 24-, 36-, and 48-tooth
-          gears arranged on a custom mounting plate. Adjacent center distances were
-          calculated from the gear radii so the teeth would engage correctly. The
-          assembled mechanism produces an overall 1:4 relationship.
+          The Four-Gear Mechanism is a manually operated mechanical system containing
+          separate 12-, 24-, 36-, and 48-tooth gears arranged on a custom mounting
+          plate. The project demonstrates gear creation, mechanical spacing,
+          rotational movement, and the transfer of motion through a connected gear
+          train.
         </p>
-
-        <h3>Electronic Expansion</h3>
-
+    
+        <h3>Mechanical Design</h3>
+    
         <p>
-          The mechanism is being expanded into a controlled embedded system using a
-          DC gearmotor, quadrature encoder, ESP32, and TB6612FNG motor driver. The
-          completed system will compare measured encoder feedback with a target speed
-          and adjust the motor command through closed-loop software.
+          Each gear and the mounting plate were modeled in Fusion 360. The required
+          center distance between adjacent gears was calculated from the pitch
+          diameter and radius of each gear so the teeth would engage without binding
+          or separating.
         </p>
-
+    
+        <p>
+          Revolute joints and motion links were used to test the assembly digitally
+          before the components were manufactured. This made it possible to evaluate
+          the direction and relative speed of each gear before completing the
+          physical mechanism.
+        </p>
+    
+        <h3>Manual Operation and Testing</h3>
+    
+        <p>
+          The finished mechanism is operated manually by rotating the input gear.
+          That movement transfers through the remaining gears and produces a
+          predictable change in direction and rotational speed. The physical
+          assembly was tested for gear engagement, alignment, clearance, and smooth
+          movement.
+        </p>
+    
+        <p>
+          The completed project demonstrates the mechanical function without using
+          motors, electronic controls, sensors, or automated feedback. Its operation
+          depends entirely on manual input and the physical relationship between the
+          gears.
+        </p>
+    
         <h3>Tools and Techniques</h3>
+    
         <ul>
           <li>Fusion 360 gear creation and assembly</li>
-          <li>Mechanical spacing and gear-ratio calculations</li>
+          <li>Gear-ratio and center-distance calculations</li>
           <li>Revolute joints and motion links</li>
-          <li>Additive manufacturing and physical motion testing</li>
-          <li>ESP32, motor-driver, actuator, and encoder integration</li>
-          <li>Planned closed-loop speed control</li>
+          <li>Mounting-plate design</li>
+          <li>Additive manufacturing</li>
+          <li>Manual mechanical operation</li>
+          <li>Physical fitment and movement testing</li>
         </ul>
       </div>
-
-      <div class="project-actions button-row">
-        <a
-          class="btn"
-          href="assets/docs/gears.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Project PDF
-        </a>
-
-        <a
-          class="btn"
-          href="assets/video/gears.mp4"
-          target="_blank"
-          rel="noopener"
-        >
-          Motion Simulation Video
-        </a>
-
-        <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
-          DMF Objective 2
-        </a>
-
-        <a class="btn btn-secondary" href="boards.html#rbt-objective-4">
-          RBT Objective 4
-        </a>
+    
+      <div class="project-actions">
+        <div class="button-row">
+          <a
+            class="btn"
+            href="assets/docs/gears.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Project PDF
+          </a>
+    
+          <a
+            class="btn"
+            href="assets/video/gears.mp4"
+            target="_blank"
+            rel="noopener"
+          >
+            Motion Simulation Video
+          </a>
+        </div>
+    
+        <div class="button-row">
+          <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
+            DMF Objective 2
+          </a>
+    
+          <a class="btn btn-secondary" href="boards.html#rbt-objective-4">
+            RBT Objective 4
+          </a>
+        </div>
       </div>
     </section>
-
     <section class="card project-record" id="gaia-monitor">
       <h2>Gaia ESP32 Enclosure Monitor</h2>
 
