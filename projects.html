@@ -816,36 +816,41 @@
       </div>
 
       <div class="grid project-image-grid">
-        <div class="card pending-evidence">
-          <h3>Components</h3>
-          <p>
-            Add the ESP32, sensor, OLED, resistor, and wiring photograph here.
-          </p>
-        </div>
+        <figure class="card">
+          <img
+            src="assets/img/gaia-2.jpeg"
+            alt="Working Gaia ESP32 temperature monitor connected on a breadboard"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            Working Gaia prototype with the ESP32, DS18B20 temperature sensor,
+            and OLED displaying a live temperature reading.
+          </figcaption>
+        </figure>
 
-        <div class="card pending-evidence">
-          <h3>Breadboard Test</h3>
-          <p>
-            Add the working breadboard circuit photograph here.
-          </p>
-          <p class="project-status">Status: Circuit operational.</p>
-        </div>
+        <figure class="card">
+          <img
+            src="assets/img/gaia-schematic.png"
+            alt="Project Gaia ESP32 temperature monitor wiring schematic"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            Wiring schematic showing the ESP32, temperature sensor, pull-up
+            resistor, OLED display, power, and data connections.
+          </figcaption>
+        </figure>
 
-        <div class="card pending-evidence">
-          <h3>Fusion 360 Housing</h3>
-          <p>
-            Add the enclosure and OLED-faceplate images after final fit testing.
-          </p>
-          <p class="project-status">Status: Faceplate development in progress.</p>
-        </div>
-
-        <div class="card pending-evidence">
-          <h3>Working Monitor</h3>
-          <p>
-            Add the completed monitor displaying a live temperature reading here.
-          </p>
-          <p class="project-status">Status: Sensor and OLED working.</p>
-        </div>
+        <figure class="card">
+          <img
+            src="assets/img/gaia-oled-faceplate.png"
+            alt="OLED dimensions beside the Fusion 360 model of the Gaia faceplate"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            OLED measurements compared with the custom Fusion 360 faceplate
+            designed for the Gaia monitor.
+          </figcaption>
+        </figure>
       </div>
 
       <div class="project-content">
@@ -867,7 +872,8 @@
         </p>
 
         <p class="project-status">
-          Status: Working prototype; final faceplate and enclosure in development.
+          Status: Working prototype with a functional sensor, OLED display, and
+          custom 3D-printed faceplate.
         </p>
 
         <h3>Components and Techniques</h3>
@@ -890,6 +896,15 @@
       </div>
 
       <div class="project-actions button-row">
+        <a
+          class="btn"
+          href="https://github.com/TRWilliams83/GAIA/blob/dcd54a833e994423052bc08f1e5d80a0f9b20f1f/gaia_thermometer.ino"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Gaia Code
+        </a>
+
         <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
           DMF Objective 5
         </a>
