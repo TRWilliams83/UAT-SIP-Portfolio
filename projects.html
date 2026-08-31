@@ -101,7 +101,6 @@
       .project-jump-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
     }
 
     @media (max-width: 520px) {
@@ -182,6 +181,8 @@
         <a class="btn" href="#ergonomic-mouse">Ergonomic Mouse</a>
         <a class="btn" href="#four-gear-mechanism">Four-Gear System</a>
         <a class="btn" href="#gaia-monitor">Gaia Monitor</a>
+        <a class="btn" href="#gaia-controller">Gaia Controller PCB</a>
+        <a class="btn" href="#8-bit-processor">8-Bit Processor</a>
         <a class="btn" href="sip.html">Project C2</a>
       </nav>
     </section>
@@ -300,7 +301,7 @@
           <li>Add optional water-level and moisture monitoring</li>
         </ul>
       </div>
-      
+
       <div class="project-actions">
         <div class="button-row">
           <a
@@ -312,12 +313,12 @@
             Patent Proposal
           </a>
         </div>
-      
+
         <div class="button-row">
           <a class="btn btn-secondary" href="boards.html#dmf-objective-1">
             DMF Objective 1
           </a>
-      
+
           <a class="btn btn-secondary" href="boards.html#dmf-objective-6">
             DMF Objective 6
           </a>
@@ -414,7 +415,7 @@
           <li>3D-printing and CNC-process comparison</li>
         </ul>
       </div>
-      
+
       <div class="project-actions">
         <div class="button-row">
           <a
@@ -426,12 +427,12 @@
             Patent Proposal
           </a>
         </div>
-      
+
         <div class="button-row">
           <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
             DMF Objective 2
           </a>
-      
+
           <a class="btn btn-secondary" href="boards.html#dmf-objective-4">
             DMF Objective 4
           </a>
@@ -535,13 +536,13 @@
 
     <section class="card project-record" id="ergonomic-mouse">
       <h2>Ergonomic Mouse Build</h2>
-    
+
       <div class="project-meta">
         <p><strong>Course:</strong> TCH270</p>
         <span class="tag">DMF Objective 3</span>
         <span class="tag">DMF Objective 5</span>
       </div>
-    
+
       <div class="grid project-image-grid">
         <figure class="card">
           <img
@@ -553,7 +554,7 @@
             Rough initial prototype sketches.
           </figcaption>
         </figure>
-    
+
         <figure class="card">
           <img
             src="assets/img/dozer-mouse-3.jpg"
@@ -564,7 +565,7 @@
             Sliced enclosure components before print.
           </figcaption>
         </figure>
-    
+
         <figure class="card">
           <img
             src="assets/img/mouse-int.png"
@@ -576,7 +577,7 @@
             wiring, and mounting features.
           </figcaption>
         </figure>
-    
+
         <figure class="card">
           <img
             src="assets/img/mouse-int2.png"
@@ -588,25 +589,25 @@
           </figcaption>
         </figure>
       </div>
-    
+
       <div class="project-content">
         <h3>Project Overview</h3>
-    
+
         <p>
           This project involved designing and building a custom ergonomic computer
           mouse around a Bambu Lab mouse components kit. The kit supplied the
           electronics and controls, while the upper shell and lower enclosure were
           modeled and manufactured to create a complete working mouse.
         </p>
-    
+
         <p>
           The enclosure was shaped to provide a more comfortable hand position while
           maintaining access to the primary buttons, scroll wheel, side controls,
           sensor, power switch, and battery compartment.
         </p>
-    
+
         <h3>Design and Component Fitment</h3>
-    
+
         <p>
           Fusion 360 was used to develop the enclosure geometry around the dimensions
           and placement requirements of the supplied components. Internal mounting
@@ -614,25 +615,25 @@
           the model so the electronics could be installed without interfering with
           the moving controls.
         </p>
-    
+
         <p>
           Bambu Studio was used to prepare the enclosure parts for additive
           manufacturing. After printing, the components were test-fitted and the
           enclosure was evaluated for assembly, control movement, electronics
           clearance, and overall comfort.
         </p>
-    
+
         <h3>Ergonomic Considerations</h3>
-    
+
         <p>
           The upper shell uses a raised and rounded profile intended to support the
           user’s palm and provide a natural grip. The location of the controls and
           openings was maintained while the exterior form was adjusted to improve
           comfort and give the finished mouse a distinct appearance.
         </p>
-    
+
         <h3>Tools and Techniques</h3>
-    
+
         <ul>
           <li>Fusion 360 enclosure design</li>
           <li>Bambu Studio print preparation</li>
@@ -643,12 +644,12 @@
           <li>Prototype testing and revision</li>
         </ul>
       </div>
-    
+
       <div class="project-actions button-row">
         <a class="btn btn-secondary" href="boards.html#dmf-objective-3">
           DMF Objective 3
         </a>
-    
+
         <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
           DMF Objective 5
         </a>
@@ -657,13 +658,12 @@
 
     <section class="card project-record" id="four-gear-mechanism">
       <h2>Four-Gear Mechanism</h2>
-    
+
       <div class="project-meta">
         <p><strong>Course:</strong> RBT205 — Mechanisms and Materials</p>
         <span class="tag">DMF Objective 2</span>
-        <span class="tag">RBT Objective 4</span>
       </div>
-    
+
       <div class="grid project-image-grid">
         <figure class="card">
           <img
@@ -671,19 +671,19 @@
             alt="Fusion 360 models of the four gears"
             loading="lazy"
           />
-    
+
           <figcaption class="image-caption">
             Fusion 360 models of the four gear sizes.
           </figcaption>
         </figure>
-    
+
         <figure class="card">
           <img
             src="assets/img/four-gears-2.png"
             alt="Four-Gear Mechanism mounting plate"
             loading="lazy"
           />
-    
+
           <figcaption class="image-caption">
             Mounting plate and calculated gear-spacing layout.
           </figcaption>
@@ -692,33 +692,31 @@
         <figure class="card">
           <img
             src="assets/img/fusion-color-gear.png"
-            alt="Four-Gear Mechanism mounting plate"
+            alt="Four-Gear Mechanism simulated appearance"
             loading="lazy"
           />
-    
+
           <figcaption class="image-caption">
-            Simulated Appearance
+            Simulated appearance.
           </figcaption>
         </figure>
 
         <figure class="card">
           <img
             src="assets/img/color-gear.JPG"
-            alt="Four-Gear Mechanism mounting plate"
+            alt="3D-printed Four-Gear Mechanism assembly"
             loading="lazy"
           />
-    
+
           <figcaption class="image-caption">
-            3D Printed Assembly
+            3D-printed assembly.
           </figcaption>
         </figure>
-    
- 
       </div>
-    
+
       <div class="project-content">
         <h3>Project Overview</h3>
-    
+
         <p>
           The Four-Gear Mechanism is a manually operated mechanical system containing
           separate 12-, 24-, 36-, and 48-tooth gears arranged on a custom mounting
@@ -726,25 +724,25 @@
           rotational movement, and the transfer of motion through a connected gear
           train.
         </p>
-    
+
         <h3>Mechanical Design</h3>
-    
+
         <p>
           Each gear and the mounting plate were modeled in Fusion 360. The required
           center distance between adjacent gears was calculated from the pitch
           diameter and radius of each gear so the teeth would engage without binding
           or separating.
         </p>
-    
+
         <p>
           Revolute joints and motion links were used to test the assembly digitally
           before the components were manufactured. This made it possible to evaluate
           the direction and relative speed of each gear before completing the
           physical mechanism.
         </p>
-    
+
         <h3>Manual Operation and Testing</h3>
-    
+
         <p>
           The finished mechanism is operated manually by rotating the input gear.
           That movement transfers through the remaining gears and produces a
@@ -752,16 +750,16 @@
           assembly was tested for gear engagement, alignment, clearance, and smooth
           movement.
         </p>
-    
+
         <p>
           The completed project demonstrates the mechanical function without using
           motors, electronic controls, sensors, or automated feedback. Its operation
           depends entirely on manual input and the physical relationship between the
           gears.
         </p>
-    
+
         <h3>Tools and Techniques</h3>
-    
+
         <ul>
           <li>Fusion 360 gear creation and assembly</li>
           <li>Gear-ratio and center-distance calculations</li>
@@ -772,7 +770,7 @@
           <li>Physical fitment and movement testing</li>
         </ul>
       </div>
-    
+
       <div class="project-actions">
         <div class="button-row">
           <a
@@ -784,35 +782,33 @@
             Project PDF
           </a>
         </div>
-      
+
         <div class="project-video">
           <iframe
             class="youtube-scroll-video"
             data-src="https://www.youtube.com/embed/SavHEgQRSHs?autoplay=1&mute=1&loop=1&playlist=SavHEgQRSHs&playsinline=1"
-            title="Screw School Motion Simulation"
+            title="Four-Gear Mechanism Motion Simulation"
             loading="lazy"
             allow="autoplay; encrypted-media; picture-in-picture"
             allowfullscreen
           ></iframe>
         </div>
-      
+
         <div class="button-row">
           <a class="btn btn-secondary" href="boards.html#dmf-objective-2">
             DMF Objective 2
           </a>
-      
-          <a class="btn btn-secondary" href="boards.html#rbt-objective-4">
-            RBT Objective 4
-          </a>
         </div>
       </div>
     </section>
+
     <section class="card project-record" id="gaia-monitor">
       <h2>Gaia ESP32 Enclosure Monitor</h2>
 
       <div class="project-meta">
         <p><strong>Project Type:</strong> Independent embedded-systems project</p>
         <span class="tag">DMF Objective 5</span>
+        <span class="tag">RBT Objective 1</span>
       </div>
 
       <div class="grid project-image-grid">
@@ -827,7 +823,7 @@
             resistor, OLED display, power, and data connections.
           </figcaption>
         </figure>
-      
+
         <figure class="card">
           <img
             src="assets/img/gaia-2.jpeg"
@@ -839,7 +835,7 @@
             sensor, OLED display, and wiring before final assembly.
           </figcaption>
         </figure>
-      
+
         <figure class="card">
           <img
             src="assets/img/gaia-4.png"
@@ -851,7 +847,7 @@
             designed for the Gaia monitor.
           </figcaption>
         </figure>
-      
+
         <figure class="card">
           <img
             src="assets/img/gaia-3.jpeg"
@@ -922,6 +918,231 @@
         <div class="button-row">
           <a class="btn btn-secondary" href="boards.html#dmf-objective-5">
             DMF Objective 5
+          </a>
+
+          <a class="btn btn-secondary" href="boards.html#rbt-objective-1">
+            RBT Objective 1
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card project-record" id="gaia-controller">
+      <h2>Gaia Controller PCB</h2>
+
+      <div class="project-meta">
+        <p><strong>Project Type:</strong> Embedded control and PCB design project</p>
+        <span class="tag">RBT Objective 1</span>
+        <span class="tag">RBT Objective 3</span>
+      </div>
+
+      <div class="grid project-image-grid">
+        <figure class="card">
+          <img
+            src="assets/img/gaia-controller-pcb.png"
+            alt="KiCad schematic for the Gaia Controller PCB"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            KiCad schematic showing the ESP32 headers, OLED and sensor connections,
+            power rails, and switched fan and pump circuits.
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img
+            src="assets/img/gaia-pcb.png"
+            alt="KiCad PCB layout for the Gaia Controller"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            PCB layout showing component placement, mounting holes, headers,
+            protection components, and board routing.
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img
+            src="assets/img/gaia-pcb-sim.png"
+            alt="KiCad 3D rendering of the Gaia Controller PCB"
+            loading="lazy"
+          />
+          <figcaption class="image-caption">
+            KiCad 3D board view used to inspect connector placement,
+            through-hole components, controller headers, and overall board layout.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="project-content">
+        <h3>Project Overview</h3>
+
+        <p>
+          The Gaia Controller PCB expands the original Gaia monitoring concept into a
+          larger embedded environmental-control platform. The design provides connections
+          for an ESP32, OLED display, SHT31 environmental sensor, rain sensor,
+          soil-moisture sensor, fan, pump, and external power.
+        </p>
+
+        <p>
+          The controller concept was first tested in Wokwi and then transferred into
+          KiCad for schematic capture and PCB development. This created a progression
+          from software and input/output testing to a physical board design intended
+          for a later fabrication phase.
+        </p>
+
+        <h3>Schematic and Embedded-System Design</h3>
+
+        <p>
+          The schematic separates the 3.3 V logic and sensor connections from the
+          switched 5 V loads. The fan and pump use AO3400A MOSFET switching stages
+          controlled by the ESP32. Gate resistors and pull-down resistors establish
+          predictable MOSFET behavior, while 1N5819 flyback diodes protect the switching
+          circuits from the inductive fan and pump loads.
+        </p>
+
+        <p>
+          Local 100 nF decoupling capacitors and bulk capacitors support the controller
+          power rails. Dedicated headers keep the display, sensors, fan, pump, and power
+          connections accessible for assembly and troubleshooting.
+        </p>
+
+        <h3>PCB Layout and Design for Manufacturing</h3>
+
+        <p>
+          The PCB layout places the two ESP32 header rows near the center of the board
+          while grouping the sensor and display headers on one side and the higher-current
+          fan, pump, and external-power connections on the opposite side. Four mounting
+          holes provide a practical way to secure the finished controller inside an
+          enclosure.
+        </p>
+
+        <p>
+          The KiCad 3D viewer was used to inspect component orientation, connector
+          accessibility, spacing, and the overall physical arrangement before fabrication.
+          The current project phase documents the completed schematic and PCB layout;
+          physical manufacturing and assembly remain future work.
+        </p>
+
+        <h3>Tools and Techniques</h3>
+        <ul>
+          <li>ESP32 embedded-system architecture</li>
+          <li>Wokwi circuit and software prototyping</li>
+          <li>KiCad schematic capture</li>
+          <li>KiCad PCB layout and 3D board inspection</li>
+          <li>AO3400A MOSFET fan and pump switching</li>
+          <li>1N5819 flyback protection</li>
+          <li>Power decoupling and bulk capacitance</li>
+          <li>Connector placement and mounting-hole design</li>
+        </ul>
+
+        <p class="project-status">
+          Status: Schematic and PCB layout completed; physical fabrication is planned
+          as a future phase.
+        </p>
+      </div>
+
+      <div class="project-actions">
+        <div class="button-row">
+          <a
+            class="btn"
+            href="https://wokwi.com/projects/473839698268590081"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Wokwi Simulation
+          </a>
+        </div>
+
+        <div class="button-row">
+          <a class="btn btn-secondary" href="boards.html#rbt-objective-1">
+            RBT Objective 1
+          </a>
+
+          <a class="btn btn-secondary" href="boards.html#rbt-objective-3">
+            RBT Objective 3
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card project-record" id="8-bit-processor">
+      <h2>8-Bit Processor Design and Validation</h2>
+
+      <div class="project-meta">
+        <p><strong>Project Type:</strong> Digital logic and microprocessor design project</p>
+        <span class="tag">RBT Objective 2</span>
+      </div>
+
+      <div class="project-content">
+        <h3>Project Overview</h3>
+
+        <p>
+          For this project, I designed and tested an 8-bit processor in Logisim Evolution.
+          I built and verified the smaller digital-logic circuits first and then connected
+          them into a working stored-program processor.
+        </p>
+
+        <p>
+          The final system includes an ALU, accumulator, registers, instruction ROM,
+          data RAM, program counter, instruction decoder, control unit, status logic,
+          buses, and an output register.
+        </p>
+
+        <h3>Digital Logic Development</h3>
+
+        <p>
+          The processor was developed from smaller tested systems including an 8-bit
+          ripple-carry adder, two's-complement subtraction, AND and OR logic,
+          multiplexers, zero detection, registers, RAM, instruction decoding, and control
+          logic. Each system was tested before being integrated into the completed CPU.
+        </p>
+
+        <h3>Processor Validation</h3>
+
+        <p>
+          The demonstration program loads 5 into the accumulator, stores it in RAM,
+          loads 3, adds the stored 5, transfers the result 8 to the output register,
+          and executes HLT.
+        </p>
+
+        <p>
+          A final verification clock pulse was applied after the halt state. The program
+          counter, accumulator, output value, and Halted state remained unchanged,
+          confirming that HLT stopped program execution and held the completed result.
+        </p>
+
+        <h3>Tools and Techniques</h3>
+        <ul>
+          <li>Logisim Evolution digital-logic design</li>
+          <li>Full adders and ripple-carry arithmetic</li>
+          <li>Two's-complement subtraction</li>
+          <li>ALU logic and multiplexing</li>
+          <li>Registers, RAM, ROM, and program counter</li>
+          <li>Instruction decoder and control unit</li>
+          <li>Stored-program testing and halt verification</li>
+        </ul>
+
+        <p class="project-status">
+          Status: Completed and validated in Logisim Evolution.
+        </p>
+      </div>
+
+      <div class="project-actions">
+        <div class="button-row">
+          <a
+            class="btn"
+            href="assets/docs/8_bit_evidence.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View 8-Bit Processor Evidence Report
+          </a>
+        </div>
+
+        <div class="button-row">
+          <a class="btn btn-secondary" href="boards.html#rbt-objective-2">
+            RBT Objective 2
           </a>
         </div>
       </div>
